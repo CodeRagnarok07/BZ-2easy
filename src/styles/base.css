@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+    :root {
+        --violet: 151 71 255;
+        --blue: 0 41 255;
+
+        --white: 255 255 255;
+        --bg-white-2: 251 251 251;
+        --white-2: 209 209 209;
+        --luz-focal: 198 198 209;
+      
+        --grey-1: 87 87 87;
+        --shadow-players: 62 62 62; /* 0.300 */
+        --button-grey-2: 57 57 57;
+        --lines-bg: 45 45 45;
+        --button-grey: 41 41 41;
+        --play: 35 35 35; /*  0.6 */
+        --dark-2: 32 33 35;
+        --bg-dark: 28 29 31;
+        --black: 0 0 0;
+    }
+
+}

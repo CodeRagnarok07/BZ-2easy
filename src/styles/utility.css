@@ -1,0 +1,17 @@
+.mode_1 {
+  --bg-dark: rgb(28 29 31);
+  --white: rgb(255 255 255);
+  --blue-b: rgb(0 41 255);
+  --black: rgb(0 0 0);
+  --dark-2: rgb(32 33 35);
+  --white-2: rgb(209 209 209);
+  --shadow-players: rgb(62 62 62 / 30%);
+  --luz-focal: rgb(198 198 209);
+  --play: rgb(35 35 35 / 60%);
+  --lines-bg: rgb(45 45 45);
+  --bg-white-2: rgb(251 251 251);
+  --violet: rgb(151 71 255);
+  --grey-1: rgb(87 87 87);
+  --button-grey: rgb(41 41 41);
+  --button-grey-2: rgb(57 57 57);
+}

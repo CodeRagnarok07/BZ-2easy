@@ -1,0 +1,20 @@
+.mode_1 {
+  --violet: #9747FF;
+  --blue: #0029FF;
+
+  --white: #FFFFFF;
+  --bg-white-2: #FBFBFB;
+  --white-2: #D1D1D1;
+  --luz-focal: #C6C6D1;
+  --white-2: #f8f8f8;
+  
+  --grey-1: #575757;
+  --shadow-players: #3e3e3e; /* 0.300 */
+  --button-grey-2: #393939;
+  --lines-bg: #2D2D2D;
+  --button-grey: #292929;
+  --play: #232323;   /*  0.6 */
+  --dark-2: #202123;
+  --bg-dark: #1C1D1F;
+  --black: #000000;
+}
