@@ -3,7 +3,6 @@
 @tailwind utilities;
 
 @layer base {
-
     :root {
         --violet: 151 71 255;
         --blue: 0 41 255;
@@ -23,5 +22,5 @@
         --bg-dark: 28 29 31;
         --black: 0 0 0;
     }
-
 }
+

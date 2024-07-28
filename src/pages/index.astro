@@ -1,14 +1,161 @@
 ---
-import Layout from '../layouts/Layout.astro';
-
+import Layout from "../layouts/Layout.astro";
+import bg2 from "../assets/bg-hero.svg";
+import player1 from "../assets/player1.png";
+import player2 from "../assets/player2.png";
 ---
 
 <Layout title="Welcome to Astro.">
+    <section class="bg-white">
+        <div
+            class="bg-gray-800 relative min-h-[50vh] md:min-h-[80vh] w-full text-center flex items-center justify-around"
+        >
+            <div class="z-20 flex flex-col justify-around gap-7 items-center">
+                <div>
+                    <h1
+                        class="text-[45px] md:text-[62px] lg:text-[120px] font-bebas leading-tight"
+                    >
+                        Conviértete en <br class="md:hidden" /> un <br
+                            class="hidden md:flex"
+                        /> mejor atleta
+                    </h1>
+                    <p class="md:text-[32px] xl:text-[40px]">
+                        Lleva tu juego al siguiente <br /> nivel y alcanza tus objetivos.
+                    </p>
+                </div>
 
-    <div class="container">
+                <button class="bg-primary p-2.5 rounded-lg"
+                    >Comenzar ahora</button
+                >
+            </div>
 
-        <h1 class="bg-primary ">hola mundo</h1>
-    </div>
-	
+            <div class="absolute top-20 grid place-content-center">
+                <svg
+                    class="w-auto h-[241px] md:h-[568px]"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="193"
+                    height="193"
+                    viewBox="0 0 193 193"
+                    fill="none"
+                >
+                    <g
+                        style="mix-blend-mode:overlay"
+                        filter="url(#filter0_f_201_1227)"
+                    >
+                        <circle cx="96.5" cy="96.4229" r="70.787" fill="#C6C6D1"
+                        ></circle>
+                    </g>
+                    <defs>
+                        <filter
+                            id="filter0_f_201_1227"
+                            x="0.828754"
+                            y="0.751606"
+                            width="191.343"
+                            height="191.343"
+                            filterUnits="userSpaceOnUse"
+                            color-interpolation-filters="sRGB"
+                        >
+                            <feFlood
+                                flood-opacity="0"
+                                result="BackgroundImageFix"></feFlood>
+                            <feBlend
+                                mode="normal"
+                                in="SourceGraphic"
+                                in2="BackgroundImageFix"
+                                result="shape"></feBlend>
+                            <feGaussianBlur
+                                stdDeviation="12.4421"
+                                result="effect1_foregroundBlur_201_1227"
+                            ></feGaussianBlur>
+                        </filter>
+                    </defs>
+                </svg>
+            </div>
+
+            <div class="z-10 absolute bottom-0 md:bottom-[-10%] h-auto w-full">
+                <img src={bg2.src} alt="" class="w-full h-[150%]" />
+                <img
+                    src={player2.src}
+                    alt=""
+                    class="w-auto h-[190%] md:h-[110%] absolute left-0 -bottom-14"
+                />
+                <img
+                    src={player1.src}
+                    alt=""
+                    class="w-auto h-[220%] md:h-[140%] absolute right-0 -bottom-14"
+                />
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white min-h-screen pt-32 text-black">
+        <div class="container text-center max-w-[60%] flex flex-col">
+            <h2 class="text-primary font-black text-[28px]">
+                Pasos de coaching
+            </h2>
+            <h4 class="">
+                Subtitulo para indicar alguna información de interés
+            </h4>
+        </div>
+
+        <div class="my-16 container px-[5%] text-white">
+            <div
+                class="bg-primary w-full rounded-2xl flex justify-around p-[22px] py-[14px]"
+            >
+                <div class="flex flex-col items-center">
+                    <span class="text-[62px] leading-none font-black">20</span>
+                    <p class="text-[9px]">Estudiantes exitosos</p>
+                </div>
+
+                <div class="flex flex-col items-center">
+                    <span class="text-[62px] leading-none font-black">20</span>
+                    <p class="text-[9px]">Estudiantes exitosos</p>
+                </div>
+
+                <div class="flex flex-col items-center">
+                    <span class="text-[62px] leading-none font-black">20</span>
+                    <p class="text-[9px]">Estudiantes exitosos</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex flex-col container px-[10%] gap-9">
+
+            <div class="flex flex-col items-center gap-5 ">
+                <h2 class="font-bebas text-6xl text-center font-medium leading-none">Que ofrecemos?</h2>
+                <p class="text-xs font-medium">Descubre cómo nuestros servicios personalizados pueden ayudarte a alcanzar tus metas futbolísticas.</p>
+
+                
+                <button class="bg-primary p-2.5 rounded-lg text-white"
+                    >Comenzar ahora</button
+                >
+
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 ">
+
+                <div class="rounded-xl border p-4 flex flex-col items-center justify-center gap-3 text-center">
+                    <h4 class="text-2xl font-bold">Videos de coaching personalilizados</h4>
+                    <p>Accede a videos de coaching hechos a medida para mejorar tus habilidades en el fútbol.</p>
+                </div>      
+                <div class="rounded-xl border p-4 flex flex-col items-center justify-center gap-3 text-center">
+                    <h4 class="text-2xl font-bold">Videos de coaching personalilizados</h4>
+                    <p>Accede a videos de coaching hechos a medida para mejorar tus habilidades en el fútbol.</p>
+                </div>      
+ 
+                <div class="rounded-xl border p-4 flex flex-col items-center justify-center gap-3 text-center">
+                    <h4 class="text-2xl font-bold">Videos de coaching personalilizados</h4>
+                    <p>Accede a videos de coaching hechos a medida para mejorar tus habilidades en el fútbol.</p>
+                </div>      
+ 
+                <div class="rounded-xl border p-4 flex flex-col items-center justify-center gap-3 text-center">
+                    <h4 class="text-2xl font-bold">Videos de coaching personalilizados</h4>
+                    <p>Accede a videos de coaching hechos a medida para mejorar tus habilidades en el fútbol.</p>
+                </div>      
+ 
+ 
+
+            </div>
+        </div>
+    </section>
 </Layout>
-	

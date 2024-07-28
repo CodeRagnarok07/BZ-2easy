@@ -5,6 +5,12 @@ export default {
 		container: {
 			center: true,
 		  },
+
+		  fontFamily: {
+			'bebas': ["Bebas Neue","sans-serif" ],
+			'urb': ["Urbanist", "sans-serif"],
+		
+		},
 		extend: {
 			
 			colors:{
