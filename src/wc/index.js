@@ -1,4 +1,4 @@
-
+console.log("loaded")
 class CustomElement extends HTMLElement{
     constructor(){
         super()

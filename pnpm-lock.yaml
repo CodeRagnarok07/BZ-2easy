@@ -14,9 +14,19 @@ importers:
       astro:
         specifier: ^4.12.2
         version: 4.12.2
+    devDependencies:
+      autoprefixer:
+        specifier: ^10.4.19
+        version: 10.4.19(postcss@8.4.40)
+      postcss:
+        specifier: ^8.4.40
+        version: 8.4.40
       tailwindcss:
         specifier: ^3.4.7
         version: 3.4.7
+      vite:
+        specifier: ^5.3.5
+        version: 5.3.5
 
 packages:
 
