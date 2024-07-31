@@ -25,7 +25,7 @@ import videoplaceholder from "../assets/video-placeholder.png";
                     </p>
                 </div>
 
-                <button class="bg-primary p-2.5 rounded-lg"
+                <button class="bg-primary p-2.5 rounded-lg md:text-3xl"
                     >Comenzar ahora</button
                 >
             </div>
@@ -91,66 +91,78 @@ import videoplaceholder from "../assets/video-placeholder.png";
         </div>
     </section>
 
+    <!-- ofecemos -->
     <section class="bg-white min-h-screen py-32 text-black">
-        <div class="container text-center px-[15%] flex flex-col">
-            <h2 class="text-primary font-black text-[28px]">
+        <div class="container text-center flex flex-col md:gap-4 w-auto items-center px-[10%]">
+            <h2 class="text-primary font-black text-[28px] md:text-7xl text-nowrap w-full ">
                 Pasos de coaching
             </h2>
-            <h4 class="">
+            <h4 class="md:text-4xl w-[60%] ">
                 Subtitulo para indicar alguna información de interés
             </h4>
         </div>
 
         <div class="my-16 container px-[5%] text-white">
             <div
-                class="bg-primary w-full rounded-2xl flex justify-around p-[22px] py-[14px]"
+                class="bg-primary w-full rounded-2xl md:rounded-[3.8rem] flex justify-around p-[22px] py-[14px] md:py-24"
             >
                 <div class="flex flex-col items-center">
-                    <span class="text-[62px] leading-none font-black">20</span>
-                    <p class="text-[9px]">Estudiantes exitosos</p>
+                    <span class="text-[62px] md:text-[200px] leading-none font-black">20</span>
+                    <p class="text-[9px] md:text-3xl">Estudiantes exitosos</p>
                 </div>
 
                 <div class="flex flex-col items-center">
-                    <span class="text-[62px] leading-none font-black">20</span>
-                    <p class="text-[9px]">Estudiantes exitosos</p>
+                    <span class="text-[62px] md:text-[200px] leading-none font-black">20</span>
+                    <p class="text-[9px] md:text-3xl">Estudiantes exitosos</p>
                 </div>
 
                 <div class="flex flex-col items-center">
-                    <span class="text-[62px] leading-none font-black">20</span>
-                    <p class="text-[9px]">Estudiantes exitosos</p>
+                    <span class="text-[62px] md:text-[200px] leading-none font-black">20</span>
+                    <p class="text-[9px] md:text-3xl">Estudiantes exitosos</p>
                 </div>
             </div>
         </div>
 
-        <div class="flex flex-col container px-[10%] gap-9">
-            <div class="flex flex-col items-center gap-5">
+        <div class="flex flex-col md:flex-row  container px-[10%] gap-9 md:gap-[3.5rem]">
+            <div class="flex flex-col items-center md:items-start justify-center gap-5 flex-1">
                 <h2
-                    class="font-bebas text-6xl text-center font-medium leading-none"
+                    class="font-bebas text-6xl text-center font-medium leading-none md:text-[6rem]"
                 >
                     Que ofrecemos?
                 </h2>
-                <p class="text-xs font-medium">
+                <p class="text-xs md:text-2xl font-medium">
                     Descubre cómo nuestros servicios personalizados pueden
                     ayudarte a alcanzar tus metas futbolísticas.
                 </p>
 
-                <button class="bg-primary p-[5px] px-2.5 rounded-lg text-white"
+                <button class="bg-primary p-[5px] px-2.5 md:p-2.5 md:px-4 rounded-lg text-white md:text-3xl"
                     >Comenzar ahora</button
                 >
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 flex-1">
+                <!-- <div
                     class="rounded-2xl border border-white-300 p-4 flex flex-col items-center justify-center gap-3 text-center"
                 >
-                    <h4 class="text-2xl font-bold">
+                    <h4 class="text-2xl font-bold md:text-3xl">
                         Videos de coaching personalilizados
                     </h4>
-                    <p>
+                    <p class="md:text-xl">
                         Accede a videos de coaching hechos a medida para mejorar
                         tus habilidades en el fútbol.
                     </p>
-                </div>
+                </div> -->
+                <div
+                class="rounded-2xl border border-white-300 p-4 flex flex-col items-center justify-center gap-3 text-center"
+            >
+                <h4 class="text-2xl font-bold">
+                    Videos de coaching personalilizados
+                </h4>
+                <p>
+                    Accede a videos de coaching hechos a medida para mejorar
+                    tus habilidades en el fútbol.
+                </p>
+            </div>
                 <div
                     class="rounded-2xl border border-white-300 p-4 flex flex-col items-center justify-center gap-3 text-center"
                 >
@@ -189,14 +201,15 @@ import videoplaceholder from "../assets/video-placeholder.png";
             </div>
         </div>
     </section>
+    <!-- ofecemos -->
 
     <!-- Planes y precios -->
-    <section class="py-16">
+    <section class="py-16 md:py-32 ">
         <div
-            class="container relative pb-16 flex justify-center flex-col items-center"
+            class="container relative pb-16  flex justify-center flex-col items-center"
         >
-            <h2 class="font-bebas text-5xl">Planes y precios</h2>
-            <span>Elige el perfecto para ti</span>
+            <h2 class="font-bebas text-5xl md:text-8xl">Planes y precios</h2>
+            <span class="md:text-2xl">Elige el perfecto para ti</span>
 
             <div class="absolute bottom-0 grid place-content-center">
                 <svg
@@ -247,14 +260,14 @@ import videoplaceholder from "../assets/video-placeholder.png";
                     class="h-auto flex flex-col gap-14 bg-gray-400 p-8 rounded-3xl text-center"
                 >
                     <div class="flex flex-col items-center gap-4">
-                        <h4 class="text-primary text-2xl">Básico</h4>
+                        <h4 class="text-primary text-2xl font-bold">Básico</h4>
                         <p class="mb-4">
                             Obsesionada con todo lo relacionado con el
                             entrenamiento
                         </p>
 
                         <div class="pt-4 flex flex-col gap-4">
-                            <h5 class="font-bebas text-5xl">€ 80</h5>
+                            <h5 class="font-bebas text-5xl md:text-7xl">€ 80</h5>
                             <span>Por todos los meses</span>
                         </div>
 
@@ -293,14 +306,14 @@ import videoplaceholder from "../assets/video-placeholder.png";
                         class="relative z-20 h-auto flex flex-col gap-14 bg-gray-400 p-8 rounded-3xl text-center"
                     >
                         <div class="flex flex-col items-center gap-4">
-                            <h4 class="text-primary text-2xl">Básico</h4>
+                            <h4 class="text-primary text-2xl leading-none flex items-center gap-4 font-bold">Básico <span class=" px-4 py-0.5 bg-primary text-white rounded-xl text-sm">5%</span></h4>
                             <p class="mb-4">
                                 Obsesionada con todo lo relacionado con el
                                 entrenamiento
                             </p>
 
                             <div class="pt-4 flex flex-col gap-4">
-                                <h5 class="font-bebas text-5xl">€ 80</h5>
+                                <h5 class="font-bebas text-5xl md:text-7xl">€ 80</h5>
                                 <span>Por todos los meses</span>
                             </div>
 
@@ -334,14 +347,14 @@ import videoplaceholder from "../assets/video-placeholder.png";
                     class="h-auto flex flex-col gap-14 bg-gray-400 p-8 rounded-3xl text-center"
                 >
                     <div class="flex flex-col items-center gap-4">
-                        <h4 class="text-primary text-2xl">Básico</h4>
+                        <h4 class="text-primary text-2xl font-bold">Básico</h4>
                         <p class="mb-4">
                             Obsesionada con todo lo relacionado con el
                             entrenamiento
                         </p>
 
                         <div class="pt-4 flex flex-col gap-4">
-                            <h5 class="font-bebas text-5xl">€ 80</h5>
+                            <h5 class="font-bebas text-5xl md:text-7xl">€ 80</h5>
                             <span>Por todos los meses</span>
                         </div>
 
@@ -375,14 +388,14 @@ import videoplaceholder from "../assets/video-placeholder.png";
     <!-- Planes y precios -->
 
     <!-- el correcto para mi? -->
-    <section class="py-16 px-[5%]">
+    <section class="py-16 md:py-32 px-[5%]">
         <div
             class="container pb-16 flex justify-center flex-col items-center text-center"
         >
-            <h2 class="font-bebas text-3xl">
+            <h2 class="font-bebas text-3xl md:text-7xl">
                 ¿Que plan es el correcto para mi?
             </h2>
-            <span class="text-xs"
+            <span class="text-xs md:text-2xl"
                 >Rellena el formulario y te lo diremos de inmediato</span
             >
         </div>
@@ -451,30 +464,34 @@ import videoplaceholder from "../assets/video-placeholder.png";
             </div>
 
             <button
-            class="bg-primary p-[14px] px-[22px] rounded-lg text-white mx-[10%]"
+            class="bg-primary p-[14px] md:px-[22px] rounded-lg text-white mx-[10%] w-min text-nowrap md:mx-auto"
             >Saber cual es mi plan ideal</button
         >
         </div>
     </section>
     <!-- el correcto para mi? -->
 
-    <section class="py-16 px-[5%]">
+    <!-- Video -->
+    <section class="py-16 md:py-32 px-[5%]">
         <div
             class="container pb-10 flex justify-center flex-col items-center text-center"
         >
-            <h2 class="font-bebas text-[33px]">
+            <h2 class="font-bebas text-3xl md:text-8xl">
                 TE DEMOSTRAMOS COMO SER EL MEJOR
             </h2>
-            <span class="text-[10px]"
+            <span class="text-[10px] md:text-xl "
                 >Comparte acceso y facilidad de uso mediante canales de comunicación empresariales.</span
             >
         </div>
 
         <div class="aspect-video">
-            <img class="rounded-xl w-full h-auto" src={videoplaceholder.src} alt="">
-
+            <!-- <video class="rounded-xl w-full h-auto" src={"https://www.youtube.com/watch?v=eaRQF-7hhmo&pp=ygUOZ3ltIG1vdGl2YXRpb24%3D"} > -->
+                <iframe class="rounded-xl" width="100%" height="100%"
+                src="https://www.youtube.com/embed/eaRQF-7hhmo">
+                </iframe>
         </div>
 
     </section>
+    <!-- Video -->
 
 </Layout>

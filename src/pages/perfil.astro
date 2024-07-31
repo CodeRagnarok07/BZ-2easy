@@ -1,17 +1,9 @@
----
-import "../styles/base.css";
-import Navbar from "./Navbar.astro";
-import Footer from "./Footer.astro";
-interface Props {
-	title: string;
-}
-
-const { title } = Astro.props;
----
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-	<head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
@@ -20,18 +12,24 @@ const { title } = Astro.props;
 
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+		<!-- modificar imports -->
+        <script src="../styles/base.css">
+		</script>
+		<script > import '../webComponents/index.js' 
+		</script>
+		<!-- modificar imports -->
+
 		<link
 			href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
 			rel="stylesheet"
 		/>
+    <title>Document</title>
+</head>
+<body>
 
-		<title>{title}</title>
-	</head>
-
-	<body class="bg-gray-800 text-white font-urb">
-		<Navbar/>
-		<slot />
-		<Footer/>
-	</body>
+    <h1 class="bg-primary text-black">hola mundo</h1>
+	<new-element>asd</new-element>
+    
+</body>
 </html>
-
