@@ -32,14 +32,15 @@
 
                 <script>
                     const content = document.getElementById("survey")
-
                     const surveyQuestion = [
                         {
                             Q:"Question text probe?",
                             R: ["Nunca", "Casi nunca", "Aveces", "Siempre"]
                         }
                     ]
+
                     // normalmente puedo usar un json o data de una api para imprimir datos en el html
+                    //  los frameworks hacen el codigo mucho mas legible como en /astro/layouts/Layout.astro
                     content.innerHTML = `
                     ${surveyQuestion.map((e)=> `
                         <p class="mb-6">${e.Q}</p>
@@ -49,22 +50,17 @@
 
                     `)}`
                 </script>
-
                 <div id="survey">
                     <p class="mb-6">Cada cuanto haces ejercicio?</p>
-    
                     <div  class="grid grid-cols-2 md:grid-cols-4 gap-5 ">
-                        
+                        <!-- opcion de web components hardcode -->
                         <wc-form-btn-survey title="nunca" icon="🙅‍♂️"></wc-form-btn-survey>
                         <wc-form-btn-survey title="nunca" icon="🙅‍♂️"></wc-form-btn-survey>
-
-                       
                     </div>
-                    
-
                 </div>
     
                 <div>
+                    <!-- opcion de hardcode extremo mas 🍝🍝🍝  -->
                     <p class="mb-6">Cada cuanto haces ejercicio?</p>
     
                     <div class="grid grid-cols-2 md:grid-cols-4 gap-5 ">
