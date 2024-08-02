@@ -5,30 +5,108 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<meta charset="UTF-8" />
-	<meta name="description" content="Astro description" />
-	<meta name="viewport" content="width=device-width" />
-	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-	<meta name="generator" content={Astro.generator} />
-
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-	<!-- modificar imports -->
-	<script src="./app.js"></script>
-	<!-- <script > import '../webComponents/index.js' </script> -->
-	<!-- modificar imports -->
-
 	<link
 		href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
 		rel="stylesheet" />
+	<script type="module" src="app.js"></script>
 	<title>Document</title>
 </head>
 
-<body>
+<body class="bg-gray-800 text-white font-urb dark">
+	<wc-layout-navbar></wc-layout-navbar>
 
-	<h1 class="bg-primary text-black">hola mundo</h1>
-	<new-element>asd</new-element>
+	<section class="container px-[10%] min-h-screen">
+
+		<div class="flex w-full justify-center gap-4 items-center my-8">
+
+			<span class="text-base">Plan Intermedio</span>
+
+			<button class="bg-gray-400 px-4 py-1 rounded-3xl text-sx text-gray-100 
+			flex gap-4 items-center">
+				Mejorar plan
+				<svg xmlns="http://www.w3.org/2000/svg" width="9" height="12" viewBox="0 0 9 12" fill="none">
+					<path d="M0.841248 5.35197L4.81398 1.37924" stroke="#575757" stroke-width="1.31575" />
+					<path d="M7.86261 5.35216L3.88988 1.37943" stroke="#575757" stroke-width="1.31575" />
+					<line x1="4.36167" y1="1.62137" x2="4.36167" y2="11.1086" stroke="#575757" stroke-width="1.31575" />
+				</svg>
+			</button>
+		</div>
+
+		<div class="flex flex-col md:flex-row items-center w-full justify-start">
+			<div class=" w-min">
+				<h3 class="font-bebas text-7xl md:text-8xl lg:text-9xl xl:text-[150px] text-nowrap">¡Hola <span class="text-primary">rafael!</span></h3>
+				<p class="text-xl md:text-4xl">Subtitulo para indicar alguna información de interés</p>
+			</div>
+
+			<div class="
+			flex my-16 relative bg-[url('/assets/perfil-road.svg')] w-[250px] h-[449px] bg-no-repeat bg-center
+			md:scale-125 md:mx-auto
+			">
+
+				<!-- <img class="invisible" src="/assets/perfil-road.svg" alt="">				 -->
+
+				<div class="absolute flex gap-8 items-center top-0 left-[18%]">
+
+					<i class="
+					bg-[url('/assets/perfil-road-icons.svg')] bg-no-repeat bg-center
+					flex rounded-full bg-primary h-14 aspect-square scale-125
+					">					
+					</i>
+
+					<h5 class="text-nowrap">Fase 1</h4>
+				</div>
+
+				<div class="absolute flex gap-8 items-center top-[25%] left-[45%]">
+					<h5 class="text-nowrap">Fase 2</h4>
+
+					<i class="
+					bg-[url('/assets/perfil-road-icons.svg')] bg-no-repeat bg-center
+					flex rounded-full bg-primary h-14 aspect-square scale-125
+					">					
+					</i>
+				</div>
+
+				<div class="absolute flex gap-8 items-center top-[49%] left-[25%]">
+
+					<i class="
+					bg-[url('/assets/perfil-road-icons.svg')] bg-no-repeat bg-center
+					flex rounded-full bg-primary h-14 aspect-square scale-125
+					">					
+					</i>
+
+					<h5 class="text-nowrap">Fase 3</h4>
+				</div>
+
+				<div class="absolute flex gap-8 items-center top-[65%] left-[45%]">
+					<h5 class="text-nowrap">Fase 4</h4>
+
+					<i class="
+					bg-[url('/assets/perfil-road-icons.svg')] bg-no-repeat bg-center
+					flex rounded-full bg-primary h-14 aspect-square scale-125
+					">					
+					</i>
+				</div>
+
+				<div class="absolute flex gap-8 items-center top-[90%] left-[15%]">
+
+					<i class="
+					bg-[url('/assets/perfil-road-icons.svg')] bg-no-repeat bg-center
+					flex rounded-full bg-primary h-14 aspect-square scale-125
+					">					
+					</i>
+
+					<h5 class="text-nowrap">Fase 5</h4>
+				</div>
+
+			</div>
+		</div>
+
+		<div class="absolute top-40 grid place-content-center">
+			<wc-focal-light></wc-focal-light>
+		</div>
+	</section>
 
 </body>
 
