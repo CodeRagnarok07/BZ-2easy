@@ -32,3 +32,6 @@ html,body{
     }
 }
 
+.messagge{
+    clip-path: url(/assets/message.svg);
+}

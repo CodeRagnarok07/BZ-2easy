@@ -5,12 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-	<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
-			rel="stylesheet"
-		/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet" />
     <script type="module" src="app.js"></script>
 
 </head>
@@ -20,35 +19,33 @@
     <!-- navbar -->
     <wc-layout-navbar></wc-layout-navbar>
 
-    <section class="">
-        <div class=" relative min-h-[50vh] md:min-h-[80vh] w-full text-center flex items-center justify-around">
-            <div class="z-20 flex flex-col justify-around gap-7 items-center">
-                <div>
-                    <h1 class="text-[45px] lg:text-[62px] xl:text-[120px] font-bebas leading-tight">
-                        Conviértete en <br class="md:hidden" /> un <br class="hidden md:flex" /> mejor atleta
-                    </h1>
-                    <p class="md:text-[32px] xl:text-[40px]">
-                        Lleva tu juego al siguiente <br /> nivel y alcanza tus objetivos.
-                    </p>
-                </div>
+    <section class=" relative min-h-[50vh] md:min-h-[80vh] w-full text-center flex items-center justify-around">
 
-                <a href="survey" class="bg-primary p-2.5 rounded-lg md:text-3xl">Comenzar ahora</a>
+        <div class="z-20 flex flex-col justify-around gap-7 items-center">
+            <div>
+                <h1 class="text-[45px] lg:text-[62px] xl:text-[120px] font-bebas leading-tight">
+                    Conviértete en <br class="md:hidden" /> un <br class="hidden md:flex" /> mejor atleta
+                </h1>
+                <p class="md:text-[32px] xl:text-[40px]">
+                    Lleva tu juego al siguiente <br /> nivel y alcanza tus objetivos.
+                </p>
             </div>
 
-            <div class="absolute top-20 grid place-content-center">
-                <wc-focal-light></wc-focal-light>
-            </div>
-
-            <div class="z-10 absolute bottom-0 md:bottom-[-10%] h-[50%] md:h-[60%] lg:h-[80%] xl:h-[90%] w-full">
-                <img src="/assets/bg-hero.svg" alt="" class="w-full h-[150%]" />
-
-                <img src="/assets/player2.png" alt=""
-                    class="w-auto h-full absolute left-0 -bottom-14" />
-
-                <img src="/assets/player1.png" alt=""
-                    class="w-auto h-[120%] absolute right-0 -bottom-14" />
-            </div>
+            <a href="survey" class="bg-primary p-2.5 rounded-lg md:text-3xl">Comenzar ahora</a>
         </div>
+
+        <div class="absolute top-20 grid place-content-center">
+            <wc-focal-light></wc-focal-light>
+        </div>
+
+        <div class="z-10 absolute bottom-0 md:bottom-[-10%] h-[50%] md:h-[60%] lg:h-[80%] xl:h-[90%] w-full">
+            <img src="/assets/bg-hero.svg" alt="" class="w-full h-[150%] absolute -bottom-20" />
+
+            <img src="/assets/player2.png" alt="" class="w-auto h-full absolute left-0 -bottom-14" />
+
+            <img src="/assets/player1.png" alt="" class="w-auto h-[120%] absolute right-0 -bottom-14" />
+        </div>
+
     </section>
 
     <!-- ofecemos -->
@@ -60,6 +57,82 @@
             <h4 class="md:text-4xl w-[60%] ">
                 Subtitulo para indicar alguna información de interés
             </h4>
+        </div>
+
+
+
+        <div class="flex w-full overflow-scroll">
+
+            <div class="flex-shrink-0 my-40 overflow-visible flex relative bg-[url('/assets/home-path.svg')] bg-no-repeat bg-center aspect-[5/1] bg-cover  w-[1717px]">
+
+                <div class="absolute flex flex-col gap-2 items-center top-[29%] left-[2%]">
+                    <h5 class="flex items-center justify-center text-white font-bold aspect-square rounded-full bg-primary text-[67px]">
+                        1</h5>
+                    <div
+                        class="aspect-[100/80] overflow-visible  bg-[url('/assets/message-t.svg')] bg-center bg-no-repeat bg-origin-border bg-cover text-xl max-w-72 p-4 scale-90
+                        flex flex-col justify-end
+                        ">
+                        <h5 class="font-bold">Creación de Rutina Personalizada</h5>
+
+                        <p>Registra membresías, beneficiarios, comercios y beneficios con vigencias y normas.</p>
+                    </div>
+
+                  
+                </div>
+
+                <div class="absolute flex flex-col gap-2 items-center top-[-15%] left-[22%]">
+                    <div
+                        class="aspect-[100/86] overflow-visible  bg-[url('/assets/message.svg')] bg-center bg-no-repeat bg-origin-border bg-cover text-xl max-w-72 p-4 scale-90">
+                        <h5 class="font-bold">Creación de Rutina Personalizada</h5>
+
+                        <p>Registra membresías, beneficiarios, comercios y beneficios con vigencias y normas.</p>
+                    </div>
+
+                    <h5 class="flex items-center justify-center text-white font-bold aspect-square rounded-full bg-primary text-[67px]">
+                        2</h5>
+                </div>
+
+                <div class="absolute flex flex-col gap-2 items-center top-[5%] left-[42%]">
+                    <h5 class="flex items-center justify-center text-white font-bold aspect-square rounded-full bg-primary text-[67px]">
+                        3</h5>
+                    <div
+                        class="aspect-[100/80] overflow-visible  bg-[url('/assets/message-t.svg')] bg-center bg-no-repeat bg-origin-border bg-cover text-xl max-w-72 p-4 scale-90
+                        flex flex-col justify-end
+                        ">
+                        <h5 class="font-bold">Creación de Rutina Personalizada</h5>
+                        <p>Registra membresías, beneficiarios, comercios y beneficios con vigencias y normas.</p>
+                    </div>            
+                </div>
+
+
+                <div class="absolute flex flex-col gap-2 items-center top-[-29%] left-[63%]">
+                    <div
+                        class="aspect-[100/86] overflow-visible  bg-[url('/assets/message.svg')] bg-center bg-no-repeat bg-origin-border bg-cover text-xl max-w-72 p-4 scale-90">
+                        <h5 class="font-bold">Creación de Rutina Personalizada</h5>
+                        <p>Registra membresías, beneficiarios, comercios y beneficios con vigencias y normas.</p>
+                    </div>
+
+                    <h5 class="flex items-center justify-center text-white font-bold 
+                aspect-square rounded-full bg-primary text-[67px]">
+                        4</h5>
+                </div>
+
+                <div class="absolute flex flex-col gap-2 items-center top-[5%] left-[80%]">
+                    <h5 class="flex items-center justify-center text-white font-bold aspect-square rounded-full bg-primary text-[67px]">
+                        5</h5>
+                    <div
+                        class="aspect-[100/80] overflow-visible  bg-[url('/assets/message-t.svg')] bg-center bg-no-repeat bg-origin-border bg-cover text-xl max-w-72 p-4 scale-90
+                        flex flex-col justify-end
+                        ">
+                        <h5 class="font-bold">Creación de Rutina Personalizada</h5>
+                        <p>Registra membresías, beneficiarios, comercios y beneficios con vigencias y normas.</p>
+                    </div>            
+                </div>
+
+
+
+
+            </div>
         </div>
 
         <div class="my-16 container px-[5%] text-white">
@@ -224,7 +297,8 @@
                     <div class="relative z-20 h-auto flex flex-col gap-14 bg-gray-400 p-8 rounded-3xl text-center">
                         <div class="flex flex-col items-center gap-4">
                             <h4 class="text-primary text-2xl leading-none flex items-center gap-4 font-bold">Básico
-                                <span class=" px-4 py-0.5 bg-primary text-white rounded-xl text-sm">5%</span></h4>
+                                <span class=" px-4 py-0.5 bg-primary text-white rounded-xl text-sm">5%</span>
+                            </h4>
                             <p class="mb-4">
                                 Obsesionada con todo lo relacionado con el
                                 entrenamiento
