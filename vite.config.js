@@ -16,4 +16,5 @@ export default defineConfig({
   resolve: {
     alias: { "/src": path.resolve(process.cwd(), "src") }
   },
+  base : "/BZ-2easy/"
 });
