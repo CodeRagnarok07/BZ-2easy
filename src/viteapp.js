@@ -1,2 +1,2 @@
 import './css/styles.css'
-import './components'
+import './components/web components'
