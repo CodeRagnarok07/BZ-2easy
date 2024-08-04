@@ -11,10 +11,21 @@ export default defineConfig({
   root: "src",
   publicDir: "../public",
   build: {
-    outDir: "../dist"
+    outDir: "../dist",
+    rollupOptions: {
+      input: {
+        home: './src/index.html',
+        survey: './src/survey.html',
+        perfil: './src/perfil.html',
+        article: './src/article.html',
+
+        // ...
+        // List all files you want in your build
+      }
+    }
   },
   resolve: {
     alias: { "/src": path.resolve(process.cwd(), "src") }
   },
-  base : "/BZ-2easy/"
+  base : "https://coderagnarok07.github.io/BZ-2easy/"
 });
