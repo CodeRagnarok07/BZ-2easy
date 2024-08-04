@@ -1,21 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
+---
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-	<link rel="preconnect" href="https://fonts.googleapis.com" />
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-	<link
-		href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
-		rel="stylesheet" />
-	<script type="module" src="app.js"></script>
-	<title>Document</title>
-</head>
-
-<body class="bg-gray-800 text-white font-urb dark">
-	<wc-layout-navbar></wc-layout-navbar>
+import Layout from "../layouts/Layout.astro"
+---
+<Layout title="home page">
 
 	<section class="container px-[10%] md:min-h-screen">
 
@@ -119,7 +106,7 @@
 
 				<div class="bg-gray-400 flex-shrink-0 p-4  rounded-lg flex flex-col gap-3 text-center w-min md:gap-8">
 					<div class="aspect-[6/4] w-full bg-center bg-cover bg-[url('https://picsum.photos/200/300')] rounded-lg "
-						src="" alt=""></div>
+						 ></div>
 					<h5 class="font-bebas text-lg md:text-[2.5rem] min-w-[191px]  md:min-w-[459px]">Horem ipsum dolor
 						sit amet</h5>
 					<p class="text-[10px] md:text-base">consectetur adipiscing elit. Etiam eu turpis molestie, dictum
@@ -150,7 +137,7 @@
 
 			<div class="bg-gray-400  p-4 md:p-8 rounded-lg flex gap-3  w-full h-min">
 				<div class="aspect-[1/1] h-[100px] md:h-[293px]  bg-center bg-cover bg-[url('https://picsum.photos/200/300')] rounded-lg"
-					src="" alt=""></div>
+					 ></div>
 
 				<div class="flex flex-col h-[100px] md:h-[293px]">
 					<h5 class="font-bebas h-min md:text-[2.5rem]">Horem ipsum dolor sit amet</h5>
@@ -188,8 +175,4 @@
 
 
 	</section>
-	<wc-layout-footer></wc-layout-footer>
-
-</body>
-
-</html>
+</Layout>

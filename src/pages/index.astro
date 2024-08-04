@@ -1,23 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
+---
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet" />
-    <script type="module" src="app.js"></script>
-
-</head>
-
-<body class="bg-gray-800 text-white font-urb">
-
-    <!-- navbar -->
-    <wc-layout-navbar></wc-layout-navbar>
+import Layout from "../layouts/Layout.astro"
+---
+<Layout title="home page">
 
     <section class=" relative min-h-[50vh] md:min-h-[80vh] w-full text-center flex items-center justify-around">
 
@@ -393,9 +378,4 @@
     </section>
     <!-- Video -->
 
-    <wc-layout-footer></wc-layout-footer>
-
-
-</body>
-
-</html>
+</Layout>

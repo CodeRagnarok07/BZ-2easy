@@ -1,31 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
+---
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet" />
-    <script type="module" src="app.js"></script>
+import Layout from "../layouts/Layout.astro"
+---
+<Layout title="home page">
 
-
-</head>
-
-<body class="bg-gray-800 text-white font-urb dark">
-
-    <!-- navbar -->
-    <wc-layout-navbar></wc-layout-navbar>
 
     <section class="container py-16 pb-32 px-[5%] md:px-[20%]">
         <form action="." method="dialog" class="flex flex-col gap-6">
 
 
             <div>
-                <h4 for="first_name" class="block mb-2 text-base  text-gray-900 dark:text-white">
+                <h4  class="block mb-2 text-base  text-gray-900 dark:text-white">
                     Question text probe?</h4>
                 <input type="text" id="first_name"
                     class="bg-gray-50  text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 
@@ -67,7 +52,7 @@
 
                     <input
                     autocomplete="off"
-                    id="datepicker-autohide" datepicker datepicker-autohide type="text" class="text-sm rounded-lg block w-full p-2.5  
+                    id="datepicker-autohide"  datepicker-autohide type="text" class="text-sm rounded-lg block w-full p-2.5  
                     bg-transparent border-2
                     border-gray-100 placeholder-gray-200 
                     text-white focus:ring-blue-500 focus:border-blue-500" placeholder="mm/dd/yyyy">
@@ -79,7 +64,7 @@
             <!-- select -->
             <div>
 
-                <h4 for="first_name" class="text-center block mb-4 text-base  text-gray-900 dark:text-white">
+                <h4  class="text-center block mb-4 text-base  text-gray-900 dark:text-white">
                     Question text probe?</h4>
 
                 <div class="grid grid-cols-4 gap-2 md:gap-4 text-xl ">
@@ -146,10 +131,4 @@
     </section>
 
 
-    <wc-layout-footer></wc-layout-footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
-
-</body>
-
-</html>
+</Layout>
