@@ -3,6 +3,12 @@ import Layout from "/src/layouts/Layout.astro";
 import FocalLight from "/src/components/FocalLight.astro";
 import StepPath from "/src/components/sections/home/StepPath.astro";
 
+import bgHero from "/src/assets/bg-hero.svg";
+import player2 from "/src/assets/player2.png";
+import player1 from "/src/assets/player1.png";
+import pathSvg from '/src/assets/home-path.svg'
+
+
 const stepPaths = [
     { top: 35, left: 3, reverse: false },
     { top: -15, left: 22, reverse: true },
@@ -10,7 +16,6 @@ const stepPaths = [
     { top: -29, left: 63, reverse: true },
     { top: 5, left: 80, reverse: false },
 ];
-
 ---
 
 <Layout title="home page">
@@ -44,19 +49,19 @@ const stepPaths = [
             class="z-10 absolute bottom-0 md:bottom-[-10%] h-[50%] md:h-[60%] lg:h-[80%] xl:h-[90%] w-full"
         >
             <img
-                src="/src/assets/bg-hero.svg"
+                src={bgHero.src}
                 alt=""
                 class="w-full h-[150%] absolute -bottom-20"
             />
 
             <img
-                src="/src/assets/player2.png"
+                src={player2.src}
                 alt=""
                 class="w-auto h-full absolute left-0 -bottom-14"
             />
 
             <img
-                src="/src/assets/player1.png"
+                src={player1.src}
                 alt=""
                 class="w-auto h-[120%] absolute right-0 -bottom-14"
             />
@@ -78,9 +83,17 @@ const stepPaths = [
             </h4>
         </div>
 
-        <div class="flex w-full overflow-scroll">
+        <div
+            class="flex w-full overflow-y-scroll overflow-scroll sm:overflow-auto"
+        >
             <div class="mx-auto">
-                <div class="flex-shrink-0 my-40 overflow-visible flex relative bg-[url('src/assets/home-path.svg')] bg-no-repeat bg-center aspect-[5/1] bg-cover  w-[1717px]">
+                <div
+                style={`background-image: url('${pathSvg.src}');`}
+                    class:list={[
+                        "flex-shrink-0 my-40 overflow-visible flex relative  aspect-[5/1] bg-cover  w-[1717px]",
+                        "bg-no-repeat bg-center", 
+                    ]}
+                >
                     {
                         stepPaths.map((e, k) => (
                             <StepPath
@@ -95,7 +108,7 @@ const stepPaths = [
             </div>
         </div>
 
-        <div class=" mb-16 md:my-32 container px-[5%] text-white">
+        <div class="mb-16 md:my-32 container px-[5%] text-white">
             <div
                 class="bg-primary w-full rounded-2xl md:rounded-[3.8rem] flex justify-around
                 p-5 py-3.5 md:py-10 lg:py-16 lx:py-24"
@@ -120,7 +133,7 @@ const stepPaths = [
         </div>
 
         <div
-            class="flex flex-col xl:flex-row container px-[10%] gap-9 lg:gap-[3.5rem] "
+            class="flex flex-col xl:flex-row container px-[10%] gap-9 lg:gap-[3.5rem]"
         >
             <div
                 class="flex flex-col items-center xl:items-start justify-center gap-5 flex-1"
@@ -143,7 +156,7 @@ const stepPaths = [
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 flex-1">
                 {
-                    [1, 2, 3,4].map((e) => (
+                    [1, 2, 3, 4].map((e) => (
                         <div class="rounded-2xl border border-white-300 p-4 flex flex-col items-center justify-center gap-3 text-center">
                             <h4 class="text-2xl font-bold">
                                 Videos de coaching personalilizados
@@ -155,7 +168,6 @@ const stepPaths = [
                         </div>
                     ))
                 }
-              
             </div>
         </div>
     </section>
@@ -169,14 +181,12 @@ const stepPaths = [
             <h2 class="font-bebas text-5xl md:text-8xl">Planes y precios</h2>
             <span class="md:text-2xl">Elige el perfecto para ti</span>
 
-            <div class=" absolute top-20 grid place-content-center">
+            <div class="absolute -top-44 grid place-content-center">
                 <FocalLight />
             </div>
         </div>
         <div class="container px-[10%]">
-            <div class="flex flex-col lg:flex-row justify-center  gap-12">
-               
-
+            <div class="flex flex-col lg:flex-row justify-center gap-12">
                 <div class="-mt-6 relative z-10 flex flex-col">
                     <button
                         class="-mb-4 mx-auto z-10 bg-primary pt-0.5 pb-[14px] px-[22px] rounded-lg text-white"

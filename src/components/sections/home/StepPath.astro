@@ -1,4 +1,7 @@
 ---
+import messageSvg from "/src/assets/message.svg";
+import messageSvgT from "/src/assets/message-t.svg";
+
 interface Props {
     step: number;
     reverse: boolean;
@@ -22,18 +25,18 @@ const { step = 1, reverse = false, top = 0, left = 0 } = Astro.props;
                 "aspect-square min-w-[76px] max-w-[104px] h-full  rounded-full bg-primary",
             ]}
         >
-            <h5 class="text-white font-bold text-[67px]">
-                <!-- text-[45px] md: -->
+            <h5 class="text-white font-bold text-[45px] md:text-[67px]">
                 {step + 1}
             </h5>
         </div>
 
         <div
+            style={`background-image: url('${reverse ? messageSvg.src : messageSvgT.src}');`}
             class:list={[
-                "aspect-[100/80] overflow-visible bg-center bg-no-repeat bg-origin-border bg-cover text-xl max-w-72 p-4 scale-90 flex flex-col",
-                reverse
-                    ? `bg-[url('src/assets/message.svg')] justify-start`
-                    : `bg-[url('src/assets/message-t.svg')] justify-end`,
+                "bg-center bg-no-repeat bg-origin-border bg-cover",
+                " overflow-visible max-w-72 p-4 ",
+                "text-xl flex flex-col relative z-20",
+                reverse ? `justify-start aspect-[93/80]` : `justify-end aspect-[100/80]`,
             ]}
         >
             <h5 class="font-bold">Creación de Rutina Personalizada</h5>
