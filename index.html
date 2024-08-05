@@ -1,402 +1,107 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet" />
-
-  <script type="module" crossorigin src="https://coderagnarok07.github.io/BZ-2easy/assets/app-aIETvmJk.js"></script>
-  <link rel="stylesheet" crossorigin href="https://coderagnarok07.github.io/BZ-2easy/assets/app-DkkycckL.css">
-</head>
-
-<body class="bg-gray-800 text-white font-urb">
-
-    <!-- navbar -->
-    <wc-layout-navbar></wc-layout-navbar>
-
-    <section class=" relative min-h-[50vh] md:min-h-[80vh] w-full text-center flex items-center justify-around">
-
-        <div class="z-20 flex flex-col justify-around gap-7 items-center">
-            <div>
-                <h1 class="text-[45px] lg:text-[62px] xl:text-[120px] font-bebas leading-tight">
-                    Conviértete en <br class="md:hidden" /> un <br class="hidden md:flex" /> mejor atleta
-                </h1>
-                <p class="md:text-[32px] xl:text-[40px]">
-                    Lleva tu juego al siguiente <br /> nivel y alcanza tus objetivos.
-                </p>
-            </div>
-
-            <a href="survey" class="bg-primary p-2.5 rounded-lg md:text-3xl">Comenzar ahora</a>
-        </div>
-
-        <div class="absolute top-20 grid place-content-center">
-            <wc-focal-light></wc-focal-light>
-        </div>
-
-        <div class="z-10 absolute bottom-0 md:bottom-[-10%] h-[50%] md:h-[60%] lg:h-[80%] xl:h-[90%] w-full">
-            <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='431'%20height='125'%20viewBox='0%200%20431%20125'%20fill='none'%3e%3cpath%20d='M-14.639%2025.4807L52.6932%2018.446C59.4316%2017.742%2066.2428%2018.4212%2072.7095%2020.442L139.45%2041.2984C149.861%2044.5518%20161.052%2044.295%20171.303%2040.5675L202.29%2029.2994C209.205%2026.7849%20216.591%2025.8349%20223.918%2026.5179L261.155%2029.9892C273.94%2031.181%20286.691%2027.3853%20296.743%2019.3955L306.795%2011.4051C319.026%201.68344%20335.111%20-1.73072%20350.236%202.18488L440.222%2025.4807M-14.639%2041.6844L52.6932%2034.6497C59.4316%2033.9457%2066.2428%2034.6249%2072.7095%2036.6457L139.45%2057.5021C149.861%2060.7555%20161.052%2060.4987%20171.303%2056.7712L202.29%2045.5031C209.205%2042.9886%20216.591%2042.0386%20223.918%2042.7216L261.155%2046.1929C273.94%2047.3847%20286.691%2043.589%20296.743%2035.5992L306.795%2027.6088C319.026%2017.8871%20335.111%2014.473%20350.236%2018.3886L440.222%2041.6844M-14.639%2058.4668L52.6932%2051.4321C59.4316%2050.7281%2066.2428%2051.4073%2072.7095%2053.4281L139.45%2074.2845C149.861%2077.5379%20161.052%2077.2811%20171.303%2073.5536L202.29%2062.2855C209.205%2059.771%20216.591%2058.821%20223.918%2059.504L261.155%2062.9753C273.94%2064.1671%20286.691%2060.3714%20296.743%2052.3816L306.795%2044.3912C319.026%2034.6695%20335.111%2031.2554%20350.236%2035.171L440.222%2058.4668M-14.639%2074.6705L52.6932%2067.6358C59.4316%2066.9318%2066.2428%2067.611%2072.7095%2069.6318L139.45%2090.4882C149.861%2093.7416%20161.052%2093.4848%20171.303%2089.7573L202.29%2078.4892C209.205%2075.9747%20216.591%2075.0247%20223.918%2075.7077L261.155%2079.179C273.94%2080.3708%20286.691%2076.5751%20296.743%2068.5853L306.795%2060.5949C319.026%2050.8732%20335.111%2047.4591%20350.236%2051.3747L440.222%2074.6705M-14.639%2090.2955L52.6932%2083.2608C59.4316%2082.5568%2066.2428%2083.236%2072.7095%2085.2568L139.45%20106.113C149.861%20109.367%20161.052%20109.11%20171.303%20105.382L202.29%2094.1142C209.205%2091.5997%20216.591%2090.6497%20223.918%2091.3327L261.155%2094.804C273.94%2095.9958%20286.691%2092.2001%20296.743%2084.2103L306.795%2076.2199C319.026%2066.4982%20335.111%2063.0841%20350.236%2066.9997L440.222%2090.2955M-14.639%20106.499L52.6932%2099.4645C59.4316%2098.7605%2066.2428%2099.4397%2072.7095%20101.461L139.45%20122.317C149.861%20125.57%20161.052%20125.314%20171.303%20121.586L202.29%20110.318C209.205%20107.803%20216.591%20106.853%20223.918%20107.536L261.155%20111.008C273.94%20112.199%20286.691%20108.404%20296.743%20100.414L306.795%2092.4236C319.026%2082.7019%20335.111%2079.2878%20350.236%2083.2034L440.222%20106.499'%20stroke='%232D2D2D'%20stroke-width='0.248843'/%3e%3c/svg%3e" alt="" class="w-full h-[150%] absolute -bottom-20" />
-
-            <img src="https://coderagnarok07.github.io/BZ-2easy/assets/player2-Cyb4LgQK.png" alt="" class="w-auto h-full absolute left-0 -bottom-14" />
-
-            <img src="https://coderagnarok07.github.io/BZ-2easy/assets/player1-BfqbvWyT.png" alt="" class="w-auto h-[120%] absolute right-0 -bottom-14" />
-        </div>
-
-    </section>
-
-    <!-- ofecemos -->
-    <section class="bg-white min-h-screen py-32 text-black">
-        <div class="container text-center flex flex-col md:gap-4 w-auto items-center px-[10%]">
-            <h2 class="text-primary font-black text-[28px] md:text-7xl text-nowrap w-full ">
-                Pasos de coaching
-            </h2>
-            <h4 class="md:text-4xl w-[60%] ">
-                Subtitulo para indicar alguna información de interés
-            </h4>
-        </div>
-
-
-
-        <div class="flex w-full overflow-scroll">
-
-            <div class="flex-shrink-0 my-40 overflow-visible flex relative bg-[url('/assets/home-path.svg')] bg-no-repeat bg-center aspect-[5/1] bg-cover  w-[1717px]">
-
-                <div class="absolute flex flex-col gap-2 items-center top-[29%] left-[2%]">
-                    <h5 class="flex items-center justify-center text-white font-bold aspect-square rounded-full bg-primary text-[67px]">
-                        1</h5>
-                    <div
-                        class="aspect-[100/80] overflow-visible  bg-[url('/assets/message-t.svg')] bg-center bg-no-repeat bg-origin-border bg-cover text-xl max-w-72 p-4 scale-90
-                        flex flex-col justify-end
-                        ">
-                        <h5 class="font-bold">Creación de Rutina Personalizada</h5>
-
-                        <p>Registra membresías, beneficiarios, comercios y beneficios con vigencias y normas.</p>
-                    </div>
-
-                  
-                </div>
-
-                <div class="absolute flex flex-col gap-2 items-center top-[-15%] left-[22%]">
-                    <div
-                        class="aspect-[100/86] overflow-visible  bg-[url('/assets/message.svg')] bg-center bg-no-repeat bg-origin-border bg-cover text-xl max-w-72 p-4 scale-90">
-                        <h5 class="font-bold">Creación de Rutina Personalizada</h5>
-
-                        <p>Registra membresías, beneficiarios, comercios y beneficios con vigencias y normas.</p>
-                    </div>
-
-                    <h5 class="flex items-center justify-center text-white font-bold aspect-square rounded-full bg-primary text-[67px]">
-                        2</h5>
-                </div>
-
-                <div class="absolute flex flex-col gap-2 items-center top-[5%] left-[42%]">
-                    <h5 class="flex items-center justify-center text-white font-bold aspect-square rounded-full bg-primary text-[67px]">
-                        3</h5>
-                    <div
-                        class="aspect-[100/80] overflow-visible  bg-[url('/assets/message-t.svg')] bg-center bg-no-repeat bg-origin-border bg-cover text-xl max-w-72 p-4 scale-90
-                        flex flex-col justify-end
-                        ">
-                        <h5 class="font-bold">Creación de Rutina Personalizada</h5>
-                        <p>Registra membresías, beneficiarios, comercios y beneficios con vigencias y normas.</p>
-                    </div>            
-                </div>
-
-
-                <div class="absolute flex flex-col gap-2 items-center top-[-29%] left-[63%]">
-                    <div
-                        class="aspect-[100/86] overflow-visible  bg-[url('/assets/message.svg')] bg-center bg-no-repeat bg-origin-border bg-cover text-xl max-w-72 p-4 scale-90">
-                        <h5 class="font-bold">Creación de Rutina Personalizada</h5>
-                        <p>Registra membresías, beneficiarios, comercios y beneficios con vigencias y normas.</p>
-                    </div>
-
-                    <h5 class="flex items-center justify-center text-white font-bold 
-                aspect-square rounded-full bg-primary text-[67px]">
-                        4</h5>
-                </div>
-
-                <div class="absolute flex flex-col gap-2 items-center top-[5%] left-[80%]">
-                    <h5 class="flex items-center justify-center text-white font-bold aspect-square rounded-full bg-primary text-[67px]">
-                        5</h5>
-                    <div
-                        class="aspect-[100/80] overflow-visible  bg-[url('/assets/message-t.svg')] bg-center bg-no-repeat bg-origin-border bg-cover text-xl max-w-72 p-4 scale-90
-                        flex flex-col justify-end
-                        ">
-                        <h5 class="font-bold">Creación de Rutina Personalizada</h5>
-                        <p>Registra membresías, beneficiarios, comercios y beneficios con vigencias y normas.</p>
-                    </div>            
-                </div>
-
-
-
-
-            </div>
-        </div>
-
-        <div class="my-16 container px-[5%] text-white">
-            <div
-                class="bg-primary w-full rounded-2xl md:rounded-[3.8rem] flex justify-around p-[22px] py-[14px] md:py-24">
-                <div class="flex flex-col items-center">
-                    <span class="text-[62px] md:text-[200px] leading-none font-black">20</span>
-                    <p class="text-[9px] md:text-3xl">Estudiantes exitosos</p>
-                </div>
-
-                <div class="flex flex-col items-center">
-                    <span class="text-[62px] md:text-[200px] leading-none font-black">20</span>
-                    <p class="text-[9px] md:text-3xl">Estudiantes exitosos</p>
-                </div>
-
-                <div class="flex flex-col items-center">
-                    <span class="text-[62px] md:text-[200px] leading-none font-black">20</span>
-                    <p class="text-[9px] md:text-3xl">Estudiantes exitosos</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="flex flex-col md:flex-row  container px-[10%] gap-9 md:gap-[3.5rem]">
-            <div class="flex flex-col items-center md:items-start justify-center gap-5 flex-1">
-                <h2 class="font-bebas text-6xl text-center font-medium leading-none md:text-[6rem]">
-                    Que ofrecemos?
-                </h2>
-                <p class="text-xs md:text-2xl font-medium">
-                    Descubre cómo nuestros servicios personalizados pueden
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="generator" content="Astro v4.12.2"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"><title>home page</title><meta name="description" content="Astro description"><link rel="stylesheet" href="/BZ-2easy/_astro/article.CDKE1ydK.css"><script type="module" src="/BZ-2easy/_astro/hoisted.DaW7qkri.js"></script></head> <body class="bg-gray-800 text-white font-urb"> <nav class="container z-20 relative mt-[29px] md:mt-[43px] flex justify-between px-[5%] md:gap-[87px] items-center"> <a class="md:mr-auto flex-shrink-0" href="/"> <img class="w-auto h-[1.9rem] md:h-[3.5rem]" src="/BZ-2easy/_astro/logo.Cg2ExKvT.png" alt=""></a> <a class="absolute left-[40%] md:flex md:relative md:left-auto flex-shrink-0 py-2 px-3 cursor-pointer border border-transparent hover:border-primary active:border-primary rounded-md"><p>Planes</p></a> <a href="/perfil" class="flex-shrink-0 py-2 px-3 cursor-pointer border border-transparent hover:border-primary active:border-primary rounded-md"><p>Iniciar sesion</p></a> </nav>  <section class="relative min-h-[50vh] md:min-h-[80vh] w-full text-center flex items-center justify-around"> <div class="z-20 flex flex-col justify-around gap-7 items-center"> <div> <h1 class="text-[45px] lg:text-[62px] xl:text-[120px] font-bebas leading-tight">
+Conviértete en <br class="md:hidden"> un <br class="hidden md:flex"> mejor atleta
+</h1> <p class="md:text-[32px] xl:text-[40px]">
+Lleva tu juego al siguiente <br> nivel y alcanza tus objetivos.
+</p> </div> <a href="survey" class="bg-primary p-2.5 rounded-lg md:text-3xl">Comenzar ahora</a> </div> <div class="absolute top-20 grid place-content-center"> <div class="w-auto aspect-square mix-blend-overlay bg-white rounded-full blur-2xl md:blur-3xl h-32 md:h-96"></div> </div> <div class="z-10 absolute bottom-0 md:bottom-[-10%] h-[50%] md:h-[60%] lg:h-[80%] xl:h-[90%] w-full"> <img src="/BZ-2easy/_astro/bg-hero.CFRXJodl.svg" alt="" class="w-full h-[150%] absolute -bottom-20"> <img src="/BZ-2easy/_astro/player2.Cyb4LgQK.png" alt="" class="w-auto h-full absolute left-0 -bottom-14"> <img src="/BZ-2easy/_astro/player1.BfqbvWyT.png" alt="" class="w-auto h-[120%] absolute right-0 -bottom-14"> </div> </section>  <section class="bg-white min-h-screen py-32 md:pt-44 text-black"> <div class="container text-center flex flex-col md:gap-4 w-auto items-center px-[10%]"> <h2 class="text-primary font-black text-[28px] md:text-7xl text-nowrap w-full">
+Pasos de coaching
+</h2> <h4 class="md:text-4xl w-[60%]">
+Subtitulo para indicar alguna información de interés
+</h4> </div> <div class="flex w-full overflow-y-scroll overflow-scroll sm:overflow-auto"> <div class="mx-auto"> <div style="background-image: url('/BZ-2easy/_astro/home-path.CxPutSy9.svg');" class="flex-shrink-0 my-40 overflow-visible flex relative  aspect-[5/1] bg-cover  w-[1717px] bg-no-repeat bg-center"> <div class="absolute top-[35%] left-[3%]"> <div class="flex   gap-2 items-center flex-col"> <div class="flex items-center justify-center aspect-square min-w-[76px] max-w-[104px] h-full  rounded-full bg-primary"> <h5 class="text-white font-bold text-[45px] md:text-[67px]"> 1 </h5> </div> <div style="background-image: url('/BZ-2easy/_astro/message-t.BIROElG0.svg');" class="bg-center bg-no-repeat bg-origin-border bg-cover  overflow-visible max-w-72 p-4  text-xl flex flex-col relative z-20 justify-end aspect-[100/80]"> <h5 class="font-bold">Creación de Rutina Personalizada</h5> <p>
+Registra membresías, beneficiarios, comercios y beneficios con
+                vigencias y normas.
+</p> </div> </div> </div><div class="absolute top-[-15%] left-[22%]"> <div class="flex   gap-2 items-center flex-col-reverse"> <div class="flex items-center justify-center aspect-square min-w-[76px] max-w-[104px] h-full  rounded-full bg-primary"> <h5 class="text-white font-bold text-[45px] md:text-[67px]"> 2 </h5> </div> <div style="background-image: url('/BZ-2easy/_astro/message.bXpmNGJg.svg');" class="bg-center bg-no-repeat bg-origin-border bg-cover  overflow-visible max-w-72 p-4  text-xl flex flex-col relative z-20 justify-start aspect-[93/80]"> <h5 class="font-bold">Creación de Rutina Personalizada</h5> <p>
+Registra membresías, beneficiarios, comercios y beneficios con
+                vigencias y normas.
+</p> </div> </div> </div><div class="absolute top-[5%] left-[42%]"> <div class="flex   gap-2 items-center flex-col"> <div class="flex items-center justify-center aspect-square min-w-[76px] max-w-[104px] h-full  rounded-full bg-primary"> <h5 class="text-white font-bold text-[45px] md:text-[67px]"> 3 </h5> </div> <div style="background-image: url('/BZ-2easy/_astro/message-t.BIROElG0.svg');" class="bg-center bg-no-repeat bg-origin-border bg-cover  overflow-visible max-w-72 p-4  text-xl flex flex-col relative z-20 justify-end aspect-[100/80]"> <h5 class="font-bold">Creación de Rutina Personalizada</h5> <p>
+Registra membresías, beneficiarios, comercios y beneficios con
+                vigencias y normas.
+</p> </div> </div> </div><div class="absolute top-[-29%] left-[63%]"> <div class="flex   gap-2 items-center flex-col-reverse"> <div class="flex items-center justify-center aspect-square min-w-[76px] max-w-[104px] h-full  rounded-full bg-primary"> <h5 class="text-white font-bold text-[45px] md:text-[67px]"> 4 </h5> </div> <div style="background-image: url('/BZ-2easy/_astro/message.bXpmNGJg.svg');" class="bg-center bg-no-repeat bg-origin-border bg-cover  overflow-visible max-w-72 p-4  text-xl flex flex-col relative z-20 justify-start aspect-[93/80]"> <h5 class="font-bold">Creación de Rutina Personalizada</h5> <p>
+Registra membresías, beneficiarios, comercios y beneficios con
+                vigencias y normas.
+</p> </div> </div> </div><div class="absolute top-[5%] left-[80%]"> <div class="flex   gap-2 items-center flex-col"> <div class="flex items-center justify-center aspect-square min-w-[76px] max-w-[104px] h-full  rounded-full bg-primary"> <h5 class="text-white font-bold text-[45px] md:text-[67px]"> 5 </h5> </div> <div style="background-image: url('/BZ-2easy/_astro/message-t.BIROElG0.svg');" class="bg-center bg-no-repeat bg-origin-border bg-cover  overflow-visible max-w-72 p-4  text-xl flex flex-col relative z-20 justify-end aspect-[100/80]"> <h5 class="font-bold">Creación de Rutina Personalizada</h5> <p>
+Registra membresías, beneficiarios, comercios y beneficios con
+                vigencias y normas.
+</p> </div> </div> </div> </div> </div> </div> <div class="mb-16 md:my-32 container px-[5%] text-white"> <div class="bg-primary w-full rounded-2xl md:rounded-[3.8rem] flex justify-around
+                p-5 py-3.5 md:py-10 lg:py-16 lx:py-24"> <div class="flex flex-col items-center"> <span class="
+                            text-[62px] sm:text-[90px] md:text-[120px] lg:text-[180px] xl:text-[200px]
+                             leading-none font-black">
+20
+</span> <p class="text-[9px] sm:text-base md:text-xl lg:text-2xl xl:text-3xl">
+Estudiantes exitosos
+</p> </div><div class="flex flex-col items-center"> <span class="
+                            text-[62px] sm:text-[90px] md:text-[120px] lg:text-[180px] xl:text-[200px]
+                             leading-none font-black">
+20
+</span> <p class="text-[9px] sm:text-base md:text-xl lg:text-2xl xl:text-3xl">
+Estudiantes exitosos
+</p> </div><div class="flex flex-col items-center"> <span class="
+                            text-[62px] sm:text-[90px] md:text-[120px] lg:text-[180px] xl:text-[200px]
+                             leading-none font-black">
+20
+</span> <p class="text-[9px] sm:text-base md:text-xl lg:text-2xl xl:text-3xl">
+Estudiantes exitosos
+</p> </div> </div> </div> <div class="flex flex-col xl:flex-row container px-[10%] gap-9 lg:gap-[3.5rem]"> <div class="flex flex-col items-center xl:items-start justify-center gap-5 flex-1"> <h2 class="font-bebas text-6xl text-center font-medium leading-none lg:text-[6rem]">
+Que ofrecemos?
+</h2> <p class="text-xs lg:text-2xl font-medium">
+Descubre cómo nuestros servicios personalizados pueden
                     ayudarte a alcanzar tus metas futbolísticas.
-                </p>
-
-                <button class="bg-primary p-[5px] px-2.5 md:p-2.5 md:px-4 rounded-lg text-white md:text-3xl">Comenzar
-                    ahora</button>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 flex-1">
-                <!-- <div
-                class="rounded-2xl border border-white-300 p-4 flex flex-col items-center justify-center gap-3 text-center"
-            >
-                <h4 class="text-2xl font-bold md:text-3xl">
-                    Videos de coaching personalilizados
-                </h4>
-                <p class="md:text-xl">
-                    Accede a videos de coaching hechos a medida para mejorar
-                    tus habilidades en el fútbol.
-                </p>
-            </div> -->
-                <div
-                    class="rounded-2xl border border-white-300 p-4 flex flex-col items-center justify-center gap-3 text-center">
-                    <h4 class="text-2xl font-bold">
-                        Videos de coaching personalilizados
-                    </h4>
-                    <p>
-                        Accede a videos de coaching hechos a medida para mejorar
-                        tus habilidades en el fútbol.
-                    </p>
-                </div>
-                <div
-                    class="rounded-2xl border border-white-300 p-4 flex flex-col items-center justify-center gap-3 text-center">
-                    <h4 class="text-2xl font-bold">
-                        Videos de coaching personalilizados
-                    </h4>
-                    <p>
-                        Accede a videos de coaching hechos a medida para mejorar
-                        tus habilidades en el fútbol.
-                    </p>
-                </div>
-
-                <div
-                    class="rounded-2xl border border-white-300 p-4 flex flex-col items-center justify-center gap-3 text-center">
-                    <h4 class="text-2xl font-bold">
-                        Videos de coaching personalilizados
-                    </h4>
-                    <p>
-                        Accede a videos de coaching hechos a medida para mejorar
-                        tus habilidades en el fútbol.
-                    </p>
-                </div>
-
-                <div
-                    class="rounded-2xl border border-white-300 p-4 flex flex-col items-center justify-center gap-3 text-center">
-                    <h4 class="text-2xl font-bold">
-                        Videos de coaching personalilizados
-                    </h4>
-                    <p>
-                        Accede a videos de coaching hechos a medida para mejorar
-                        tus habilidades en el fútbol.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- ofecemos -->
-
-    <!-- Planes y precios -->
-    <section class="py-16 md:py-32 ">
-        <div class="container relative pb-16  flex justify-center flex-col items-center">
-            <h2 class="font-bebas text-5xl md:text-8xl">Planes y precios</h2>
-            <span class="md:text-2xl">Elige el perfecto para ti</span>
-
-            <div class="absolute bottom-0 grid place-content-center">
-                <svg class="w-auto h-[241px] md:h-[568px]" xmlns="http://www.w3.org/2000/svg" width="193" height="193"
-                    viewBox="0 0 193 193" fill="none">
-                    <g style="mix-blend-mode:overlay" filter="url(#filter0_f_201_1227)">
-                        <circle cx="96.5" cy="96.4229" r="70.787" fill="#C6C6D1"></circle>
-                    </g>
-                    <defs>
-                        <filter id="filter0_f_201_1227" x="0.828754" y="0.751606" width="191.343" height="191.343"
-                            filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                            <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
-                            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feBlend>
-                            <feGaussianBlur stdDeviation="12.4421" result="effect1_foregroundBlur_201_1227">
-                            </feGaussianBlur>
-                        </filter>
-                    </defs>
-                </svg>
-            </div>
-        </div>
-        <div class="container px-[10%]">
-            <div class="flex flex-col md:flex-row gap-12">
-                <div class="h-auto flex flex-col gap-14 bg-gray-400 p-8 rounded-3xl text-center">
-                    <div class="flex flex-col items-center gap-4">
-                        <h4 class="text-primary text-2xl font-bold">Básico</h4>
-                        <p class="mb-4">
-                            Obsesionada con todo lo relacionado con el
-                            entrenamiento
-                        </p>
-
-                        <div class="pt-4 flex flex-col gap-4">
-                            <h5 class="font-bebas text-5xl md:text-7xl">€ 80</h5>
-                            <span>Por todos los meses</span>
-                        </div>
-
-                        <hr class="border border-white-200 w-full" />
-                        <div class="flex flex-col text-left gap-2">
-                            <h5>incluye:</h5>
-                            <ul class="ml-5 flex flex-col gap-2">
-                                <li>
-                                    Lorem ipsum dolor sit amet sel vicabrio da
-                                    troi
-                                </li>
-                                <li>
-                                    Lorem ipsum dolor sit amet sel vicabrio da
-                                    troi
-                                </li>
-                                <li>
-                                    Lorem ipsum dolor sit amet sel vicabrio da
-                                    troi
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <button class="bg-primary p-[14px] px-[22px] rounded-lg text-white mx-[10%]">Adquirir
-                        membresia</button>
-                </div>
-
-                <div class="-mt-5 relative flex flex-col">
-                    <button class="-mb-4 mx-auto z-10 bg-primary pt-0.5 pb-[14px] px-[22px] rounded-lg text-white">Más
-                        popular 🔥</button>
-
-                    <div class="relative z-20 h-auto flex flex-col gap-14 bg-gray-400 p-8 rounded-3xl text-center">
-                        <div class="flex flex-col items-center gap-4">
-                            <h4 class="text-primary text-2xl leading-none flex items-center gap-4 font-bold">Básico
-                                <span class=" px-4 py-0.5 bg-primary text-white rounded-xl text-sm">5%</span>
-                            </h4>
-                            <p class="mb-4">
-                                Obsesionada con todo lo relacionado con el
+</p> <button class="bg-primary p-[5px] px-2.5 lg:p-2.5 lg:px-4 rounded-lg text-white lg:text-3xl">Comenzar ahora</button> </div> <div class="grid grid-cols-1 md:grid-cols-2 gap-6 flex-1"> <div class="rounded-2xl border border-white-300 p-4 flex flex-col items-center justify-center gap-3 text-center"> <h4 class="text-2xl font-bold">
+Videos de coaching personalilizados
+</h4> <p>
+Accede a videos de coaching hechos a medida para
+                                mejorar tus habilidades en el fútbol.
+</p> </div><div class="rounded-2xl border border-white-300 p-4 flex flex-col items-center justify-center gap-3 text-center"> <h4 class="text-2xl font-bold">
+Videos de coaching personalilizados
+</h4> <p>
+Accede a videos de coaching hechos a medida para
+                                mejorar tus habilidades en el fútbol.
+</p> </div><div class="rounded-2xl border border-white-300 p-4 flex flex-col items-center justify-center gap-3 text-center"> <h4 class="text-2xl font-bold">
+Videos de coaching personalilizados
+</h4> <p>
+Accede a videos de coaching hechos a medida para
+                                mejorar tus habilidades en el fútbol.
+</p> </div><div class="rounded-2xl border border-white-300 p-4 flex flex-col items-center justify-center gap-3 text-center"> <h4 class="text-2xl font-bold">
+Videos de coaching personalilizados
+</h4> <p>
+Accede a videos de coaching hechos a medida para
+                                mejorar tus habilidades en el fútbol.
+</p> </div> </div> </div> </section>   <section class="py-16 md:py-32"> <div class="container relative pb-16 flex justify-center flex-col items-center"> <h2 class="font-bebas text-5xl md:text-8xl">Planes y precios</h2> <span class="md:text-2xl">Elige el perfecto para ti</span> <div class="absolute -top-44 grid place-content-center"> <div class="w-auto aspect-square mix-blend-overlay bg-white rounded-full blur-2xl md:blur-3xl h-32 md:h-96"></div> </div> </div> <div class="container px-[10%]"> <div class="flex flex-col lg:flex-row justify-center gap-12"> <div class="-mt-6 relative z-10 flex flex-col"> <button class="-mb-4 mx-auto z-10 bg-primary pt-0.5 pb-[14px] px-[22px] rounded-lg text-white">Más popular 🔥</button> <div class="relative z-20 h-auto flex flex-col gap-14 bg-gray-400 p-8 rounded-3xl text-center"> <div class="flex flex-col items-center gap-4"> <h4 class="text-primary text-2xl leading-none flex items-center gap-4 font-bold">
+Básico
+<span class="px-4 py-0.5 bg-primary text-white rounded-xl text-sm">5%</span> </h4> <p class="mb-4">
+Obsesionada con todo lo relacionado con el
                                 entrenamiento
-                            </p>
-
-                            <div class="pt-4 flex flex-col gap-4">
-                                <h5 class="font-bebas text-5xl md:text-7xl">€ 80</h5>
-                                <span>Por todos los meses</span>
-                            </div>
-
-                            <hr class="border border-white-200 w-full" />
-                            <div class="flex flex-col text-left gap-2">
-                                <h5>incluye:</h5>
-                                <ul class="ml-5 flex flex-col gap-2">
-                                    <li>
-                                        Lorem ipsum dolor sit amet sel vicabrio
+</p> <div class="pt-4 flex flex-col gap-4"> <h5 class="font-bebas text-5xl md:text-7xl">
+€ 80
+</h5> <span>Por todos los meses</span> </div> <hr class="border border-white-200 w-full"> <div class="flex flex-col text-left gap-2"> <h5>incluye:</h5> <ul class="ml-5 flex flex-col gap-2"> <li>
+Lorem ipsum dolor sit amet sel vicabrio
                                         da troi
-                                    </li>
-                                    <li>
-                                        Lorem ipsum dolor sit amet sel vicabrio
+</li> <li>
+Lorem ipsum dolor sit amet sel vicabrio
                                         da troi
-                                    </li>
-                                    <li>
-                                        Lorem ipsum dolor sit amet sel vicabrio
+</li> <li>
+Lorem ipsum dolor sit amet sel vicabrio
                                         da troi
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <button class="bg-primary p-[14px] px-[22px] rounded-lg text-white mx-[10%]">Adquirir
-                            membresia</button>
-                    </div>
-                </div>
-
-                <div class="h-auto flex flex-col gap-14 bg-gray-400 p-8 rounded-3xl text-center">
-                    <div class="flex flex-col items-center gap-4">
-                        <h4 class="text-primary text-2xl font-bold">Básico</h4>
-                        <p class="mb-4">
-                            Obsesionada con todo lo relacionado con el
+</li> </ul> </div> </div> <button class="bg-primary p-[14px] px-[22px] rounded-lg text-white mx-[10%]">Adquirir membresia</button> </div> </div> <div class="relative z-10 h-auto flex flex-col gap-14 bg-gray-400 p-8 rounded-3xl text-center"> <div class="flex flex-col items-center gap-4"> <h4 class="text-primary text-2xl font-bold">Básico</h4> <p class="mb-4">
+Obsesionada con todo lo relacionado con el
                             entrenamiento
-                        </p>
-
-                        <div class="pt-4 flex flex-col gap-4">
-                            <h5 class="font-bebas text-5xl md:text-7xl">€ 80</h5>
-                            <span>Por todos los meses</span>
-                        </div>
-
-                        <hr class="border border-white-200 w-full" />
-                        <div class="flex flex-col text-left gap-2">
-                            <h5>incluye:</h5>
-                            <ul class="ml-5 flex flex-col gap-2">
-                                <li>
-                                    Lorem ipsum dolor sit amet sel vicabrio da
+</p> <div class="pt-4 flex flex-col gap-4"> <h5 class="font-bebas text-5xl md:text-7xl">
+€ 80
+</h5> <span>Por todos los meses</span> </div> <hr class="border border-white-200 w-full"> <div class="flex flex-col text-left gap-2"> <h5>incluye:</h5> <ul class="ml-5 flex flex-col gap-2"> <li>
+Lorem ipsum dolor sit amet sel vicabrio da
                                     troi
-                                </li>
-                                <li>
-                                    Lorem ipsum dolor sit amet sel vicabrio da
+</li> <li>
+Lorem ipsum dolor sit amet sel vicabrio da
                                     troi
-                                </li>
-                                <li>
-                                    Lorem ipsum dolor sit amet sel vicabrio da
+</li> <li>
+Lorem ipsum dolor sit amet sel vicabrio da
                                     troi
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <button class="bg-primary p-[14px] px-[22px] rounded-lg text-white mx-[10%]">Adquirir
-                        membresia</button>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Planes y precios -->
-
-
-    <!-- Video -->
-    <section class="py-16 md:py-32 px-[5%]">
-        <div class="container pb-10 flex justify-center flex-col items-center text-center">
-            <h2 class="font-bebas text-3xl md:text-8xl">
-                TE DEMOSTRAMOS COMO SER EL MEJOR
-            </h2>
-            <span class="text-[10px] md:text-xl ">Comparte acceso y facilidad de uso mediante canales de comunicación
-                empresariales.</span>
-        </div>
-
-        <div class="aspect-video">
-            <!-- <video class="rounded-xl w-full h-auto" src={"https://www.youtube.com/watch?v=eaRQF-7hhmo&pp=ygUOZ3ltIG1vdGl2YXRpb24%3D"} > -->
-            <iframe class="rounded-xl" width="100%" height="100%" src="https://www.youtube.com/embed/eaRQF-7hhmo">
-            </iframe>
-        </div>
-
-    </section>
-    <!-- Video -->
-
-    <wc-layout-footer></wc-layout-footer>
-
-
-</body>
-
-</html>
+</li> </ul> </div> </div> <button class="bg-primary p-[14px] px-[22px] rounded-lg text-white mx-[10%]">Adquirir membresia</button> </div> </div> </div> </section>   <section class="py-16 md:py-32 px-[5%] container"> <div class="container pb-10 flex justify-center flex-col items-center text-center"> <h2 class="font-bebas text-3xl md:text-8xl">
+TE DEMOSTRAMOS COMO SER EL MEJOR
+</h2> <span class="text-[10px] md:text-xl">Comparte acceso y facilidad de uso mediante canales de
+                comunicación empresariales.</span> </div> <div class="aspect-video"> <!-- <video class="rounded-xl w-full h-auto" src={"https://www.youtube.com/watch?v=eaRQF-7hhmo&pp=ygUOZ3ltIG1vdGl2YXRpb24%3D"} > --> <iframe class="rounded-xl" width="100%" height="100%" src="https://www.youtube.com/embed/eaRQF-7hhmo">
+            </iframe> </div> </section>   <footer class="min-h-[50vh] bg-primary grid place-content-center place-items-center py-24 md:py-56"> <div class="flex flex-row flex-wrap items-center md:items-start container px-[10%] gap-10 justify-center"> <div class="flex-1"> <a class="md:mr-auto flex-shrink-0" href="/"> <img class="w-auto mb-10" src="/BZ-2easy/_astro/logo.Cg2ExKvT.png" alt=""></a> <ul> <li>Carrera 51B #80 - 58 Oficina 1403B</li> <li>Barranquilla 080001, Colombia</li> <li>Whatsapp: +57 3217294931</li> </ul> </div> <div class="flex-0 md:flex-1 ">
+Horem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
+            turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus
+            nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum
+            tellus elit sed risus
+</div> <div class="flex gap-8 justify-center flex-1"> <a class="" href="/"> <img class="w-auto" src="/BZ-2easy/_astro/fb.DzAh0rnL.svg" alt=""></a> <a class="" href="/"> <img class="w-auto" src="/BZ-2easy/_astro/linkedin.ChpncX26.svg" alt=""></a> <a class="" href="/"> <img class="w-auto" src="/BZ-2easy/_astro/ig.D1ehxcQB.svg" alt=""></a> </div> </div> </footer>  </body> </html>
