@@ -5,6 +5,8 @@ import tailwind from "@astrojs/tailwind";
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind({
-     applyBaseStyles: false, 
-    })]
+    applyBaseStyles: false,
+  })],
+  site: 'https://CodeRagnarok07.github.io',
+  base: 'BZ-2easy',
 });
