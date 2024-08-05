@@ -35,16 +35,19 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v3 # https://github.com/pnpm/action-setup
+        
+      - uses: pnpm/action-setup@v4 # https://github.com/pnpm/action-setup
+        name: Install pnpm
         with:
           version: 8
+          run_install: false
           
-      - name: Setup Node
+      - name: Install Node.js
         uses: actions/setup-node@v4
         with:
           node-version: "20"
           cache: pnpm
-          cache-dependency-path: ${{ env.BUILD_PATH }}//package-lock.json
+          # cache-dependency-path: ${{ env.BUILD_PATH }}//package-lock.json
 
       - name: Setup Pages
         id: pages
