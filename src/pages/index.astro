@@ -1,6 +1,25 @@
 ---
 
 import Layout from "../layouts/Layout.astro"
+import FocalLight from '/src/components/FocalLight.astro'
+import StepPath from '/src/components/sections/home/StepPath.astro'
+
+
+const stepPaths = [
+    {top:29, left:2, reverse:false},
+    {top:-15, left:22, reverse:true},
+    {top:5, left:42, reverse:false},
+    {top:-29, left:63, reverse:true},
+    {top:5, left:80, reverse:false},
+
+]
+
+// top-[-15%] left-[22%]
+// top-[5%] left-[42%]
+// top-[-29%] left-[63%]
+// top-[5%] left-[80%]
+
+
 ---
 <Layout title="home page">
 
@@ -20,21 +39,22 @@ import Layout from "../layouts/Layout.astro"
         </div>
 
         <div class="absolute top-20 grid place-content-center">
-            <wc-focal-light></wc-focal-light>
+            <FocalLight/>
         </div>
 
         <div class="z-10 absolute bottom-0 md:bottom-[-10%] h-[50%] md:h-[60%] lg:h-[80%] xl:h-[90%] w-full">
-            <img src="/assets/bg-hero.svg" alt="" class="w-full h-[150%] absolute -bottom-20" />
+            <img src="/src/assets/bg-hero.svg" alt="" class="w-full h-[150%] absolute -bottom-20" />
 
-            <img src="/assets/player2.png" alt="" class="w-auto h-full absolute left-0 -bottom-14" />
+            <img src="/src/assets/player2.png" alt="" class="w-auto h-full absolute left-0 -bottom-14" />
 
-            <img src="/assets/player1.png" alt="" class="w-auto h-[120%] absolute right-0 -bottom-14" />
+            <img src="/src/assets/player1.png" alt="" class="w-auto h-[120%] absolute right-0 -bottom-14" />
         </div>
 
     </section>
 
     <!-- ofecemos -->
     <section class="bg-white min-h-screen py-32 text-black">
+
         <div class="container text-center flex flex-col md:gap-4 w-auto items-center px-[10%]">
             <h2 class="text-primary font-black text-[28px] md:text-7xl text-nowrap w-full ">
                 Pasos de coaching
@@ -48,76 +68,10 @@ import Layout from "../layouts/Layout.astro"
 
         <div class="flex w-full overflow-scroll">
 
-            <div class="flex-shrink-0 my-40 overflow-visible flex relative bg-[url('/assets/home-path.svg')] bg-no-repeat bg-center aspect-[5/1] bg-cover  w-[1717px]">
-
-                <div class="absolute flex flex-col gap-2 items-center top-[29%] left-[2%]">
-                    <h5 class="flex items-center justify-center text-white font-bold aspect-square rounded-full bg-primary text-[67px]">
-                        1</h5>
-                    <div
-                        class="aspect-[100/80] overflow-visible  bg-[url('/assets/message-t.svg')] bg-center bg-no-repeat bg-origin-border bg-cover text-xl max-w-72 p-4 scale-90
-                        flex flex-col justify-end
-                        ">
-                        <h5 class="font-bold">Creación de Rutina Personalizada</h5>
-
-                        <p>Registra membresías, beneficiarios, comercios y beneficios con vigencias y normas.</p>
-                    </div>
-
-                  
-                </div>
-
-                <div class="absolute flex flex-col gap-2 items-center top-[-15%] left-[22%]">
-                    <div
-                        class="aspect-[100/86] overflow-visible  bg-[url('/assets/message.svg')] bg-center bg-no-repeat bg-origin-border bg-cover text-xl max-w-72 p-4 scale-90">
-                        <h5 class="font-bold">Creación de Rutina Personalizada</h5>
-
-                        <p>Registra membresías, beneficiarios, comercios y beneficios con vigencias y normas.</p>
-                    </div>
-
-                    <h5 class="flex items-center justify-center text-white font-bold aspect-square rounded-full bg-primary text-[67px]">
-                        2</h5>
-                </div>
-
-                <div class="absolute flex flex-col gap-2 items-center top-[5%] left-[42%]">
-                    <h5 class="flex items-center justify-center text-white font-bold aspect-square rounded-full bg-primary text-[67px]">
-                        3</h5>
-                    <div
-                        class="aspect-[100/80] overflow-visible  bg-[url('/assets/message-t.svg')] bg-center bg-no-repeat bg-origin-border bg-cover text-xl max-w-72 p-4 scale-90
-                        flex flex-col justify-end
-                        ">
-                        <h5 class="font-bold">Creación de Rutina Personalizada</h5>
-                        <p>Registra membresías, beneficiarios, comercios y beneficios con vigencias y normas.</p>
-                    </div>            
-                </div>
-
-
-                <div class="absolute flex flex-col gap-2 items-center top-[-29%] left-[63%]">
-                    <div
-                        class="aspect-[100/86] overflow-visible  bg-[url('/assets/message.svg')] bg-center bg-no-repeat bg-origin-border bg-cover text-xl max-w-72 p-4 scale-90">
-                        <h5 class="font-bold">Creación de Rutina Personalizada</h5>
-                        <p>Registra membresías, beneficiarios, comercios y beneficios con vigencias y normas.</p>
-                    </div>
-
-                    <h5 class="flex items-center justify-center text-white font-bold 
-                aspect-square rounded-full bg-primary text-[67px]">
-                        4</h5>
-                </div>
-
-                <div class="absolute flex flex-col gap-2 items-center top-[5%] left-[80%]">
-                    <h5 class="flex items-center justify-center text-white font-bold aspect-square rounded-full bg-primary text-[67px]">
-                        5</h5>
-                    <div
-                        class="aspect-[100/80] overflow-visible  bg-[url('/assets/message-t.svg')] bg-center bg-no-repeat bg-origin-border bg-cover text-xl max-w-72 p-4 scale-90
-                        flex flex-col justify-end
-                        ">
-                        <h5 class="font-bold">Creación de Rutina Personalizada</h5>
-                        <p>Registra membresías, beneficiarios, comercios y beneficios con vigencias y normas.</p>
-                    </div>            
-                </div>
-
-
-
-
+            <div class="flex-shrink-0 my-40 overflow-visible flex relative bg-[url('src/assets/home-path.svg')] bg-no-repeat bg-center aspect-[5/1] bg-cover  w-[1717px]">
+                {stepPaths.map((e,k)=>(<StepPath step={k} top={e.top} left={e.left} reverse={e.reverse}/>))}
             </div>
+
         </div>
 
         <div class="my-16 container px-[5%] text-white">

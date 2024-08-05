@@ -1,0 +1,39 @@
+---
+interface Props {
+    step: number;
+    reverse: boolean;
+    top: number;
+    left: number;
+}
+
+const { step = 1, reverse = false, top = 0, left = 0 } = Astro.props;
+---
+
+<div class=`absolute top-[${top}%] left-[${left}%]`>
+    <div
+        class:list={[
+            "flex   gap-2 items-center",
+            `flex-col${reverse ? "-reverse" : ""}`,
+        ]}
+    >
+        <h5 class="flex items-center justify-center text-white font-bold aspect-square rounded-full bg-primary text-[67px]">
+            {step + 1}
+        </h5>
+
+        <div
+            class:list={[
+                "aspect-[100/80] overflow-visible bg-center bg-no-repeat bg-origin-border bg-cover text-xl max-w-72 p-4 scale-90 flex flex-col",
+                reverse
+                    ? `bg-[url('src/assets/message.svg')] justify-start`
+                    : `bg-[url('src/assets/message-t.svg')] justify-end`,
+            ]}
+        >
+            <h5 class="font-bold">Creación de Rutina Personalizada</h5>
+
+            <p>
+                Registra membresías, beneficiarios, comercios y beneficios con
+                vigencias y normas.
+            </p>
+        </div>
+    </div>
+</div>
