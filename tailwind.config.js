@@ -43,6 +43,19 @@ export default {
   plugins: [
     require('flowbite/plugin')
   ],
-  safelist: ["flex-col-reverse"]
+  safelist: ["flex-col-reverse",
+    "top-[35%]",
+    "left-[3%] ",
+    "top-[-15%] ",
+    "left-[22%] ",
+    "top-[5%] ",
+    "left-[42%] ",
+    "top-[-29%] ",
+    "left-[63%] ",
+    "top-[5%] ",
+    "left-[80%] ",
+
+
+  ]
 }
 
