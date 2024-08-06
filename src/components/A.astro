@@ -1,0 +1,20 @@
+---
+interface Props {
+    className: string;
+    href?: string;
+}
+
+const { href = "/", className } = Astro.props;
+let ref = href;
+
+if (!ref?.endsWith("/")) {
+    ref = ref + "/";
+}
+if (ref.startsWith("/")) {
+    ref = ref.replace("/", "");
+}
+---
+
+<a href={import.meta.env.BASE_URL + ref} class={className}>
+    <slot />
+</a>

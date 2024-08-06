@@ -9,4 +9,5 @@ export default defineConfig({
   })],
   site: 'https://CodeRagnarok07.github.io',
   base: 'BZ-2easy',
+  trailingSlash: "always"
 });

@@ -14,7 +14,7 @@ customElements.define("wc-layout-footer", class extends HTMLElement {
     >
         <div class="flex flex-row flex-wrap items-center md:items-start container px-[10%] gap-10 justify-center">
             <div class="flex-1">
-                <a class="md:mr-auto flex-shrink-0" href="/">
+                <a class="md:mr-auto flex-shrink-0" href="">
                     <img
                         class="w-auto mb-10"
                         src="${logo}"
@@ -38,9 +38,9 @@ customElements.define("wc-layout-footer", class extends HTMLElement {
             </div>
     
             <div class="flex gap-8 justify-center flex-1">
-                <a class="" href="/"> <img class="w-auto" src="${fb}" alt="" /></a>
-                <a class="" href="/"> <img class="w-auto" src="${linkedin}" alt="" /></a>
-                <a class="" href="/"> <img class="w-auto" src="${ig}" alt="" /></a>
+                <a class="" href=""> <img class="w-auto" src="${fb}" alt="" /></a>
+                <a class="" href=""> <img class="w-auto" src="${linkedin}" alt="" /></a>
+                <a class="" href=""> <img class="w-auto" src="${ig}" alt="" /></a>
             </div>
         </div>
     </footer>

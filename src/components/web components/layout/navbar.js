@@ -7,7 +7,7 @@ customElements.define("wc-layout-navbar", class extends HTMLElement {
         <nav
             class="container mt-[29px] md:mt-[43px] flex justify-between px-[5%] md:gap-[87px] items-center"
             >
-            <a class="md:mr-auto flex-shrink-0" href="/">
+            <a class="md:mr-auto flex-shrink-0" href="">
                 <img
                     class="w-auto h-[1.9rem] md:h-[3.5rem]"
                     src="${logo}"
