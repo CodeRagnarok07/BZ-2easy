@@ -8,6 +8,7 @@ export default defineConfig({
     applyBaseStyles: false,
   })],
   site: 'https://CodeRagnarok07.github.io',
-  base: 'BZ-2easy',
-  trailingSlash: "always"
+
+  base: '/BZ-2easy/',
+  // trailingSlash: "always"
 });
