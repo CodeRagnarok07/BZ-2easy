@@ -1,0 +1,24 @@
+---
+import FocalLight from "/src/components/FocalLight.astro"
+import Tag from "./Tag.astro"
+---
+
+<section id="planes" class="py-16 md:py-32">
+    <div
+        class="container relative pb-16 flex justify-center flex-col items-center"
+    >
+        <h2 class="font-bebas text-5xl md:text-8xl">Planes y precios</h2>
+        <span class="md:text-2xl">Elige el perfecto para ti</span>
+
+        <div class="absolute -top-44 grid place-content-center">
+            <FocalLight />
+        </div>
+    </div>
+    <div class="container px-[10%]">
+        <div class="flex flex-col lg:flex-row justify-center gap-12">
+            <Tag hot={true}/>
+            <Tag/>
+           
+        </div>
+    </div>
+</section>

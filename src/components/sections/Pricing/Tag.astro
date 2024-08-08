@@ -1,0 +1,61 @@
+---
+const { hot = false } = Astro.props;
+---
+
+<div class="relative z-10 flex flex-col">
+    {
+        hot && (
+            <div class="absolute flex -top-6 inset-x-0 z-10 ">
+                <span class="flex mx-auto bg-primary pt-0.5 pb-[14px] px-[22px] rounded-lg text-white"> Más popular 🔥</span>
+            </div>
+        )
+    }
+
+    <div
+        class="relative z-20 h-auto flex flex-col gap-14 bg-gray-400 p-8 rounded-3xl text-center"
+    >
+        <div class="flex flex-col items-center gap-4">
+            <h4
+                class="text-primary text-3xl leading-none flex items-center gap-4 font-bold"
+            >
+                Silver
+                <svg width="27" height="26" viewBox="0 0 27 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_583_1825)">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M26.0536 13.2706C26.0536 20.2038 20.4332 25.8243 13.5 25.8243C6.56676 25.8243 0.946289 20.2038 0.946289 13.2706C0.946289 6.33739 6.56676 0.716919 13.5 0.716919C20.4332 0.716919 26.0536 6.33739 26.0536 13.2706ZM4.08471 13.0744C4.08471 7.98236 8.21173 3.85534 13.3038 3.85534C15.7489 3.85534 18.0938 4.82664 19.8227 6.55555C21.5516 8.28447 22.5229 10.6294 22.5229 13.0744C22.5229 18.1665 18.3959 22.2936 13.3038 22.2936C8.21173 22.2936 4.08471 18.1665 4.08471 13.0744ZM8.41049 17.9678C9.70828 19.2656 11.4685 19.9947 13.3038 19.9947C15.1392 19.9947 16.8994 19.2656 18.1971 17.9678C19.4949 16.67 20.224 14.9098 20.224 13.0744C20.224 11.2391 19.4949 9.47891 18.1971 8.18112C16.8994 6.88332 15.1392 6.15423 13.3038 6.15423C11.4685 6.15423 9.70828 6.88332 8.41049 8.18112C7.11269 9.47891 6.3836 11.2391 6.3836 13.0744C6.3836 14.9098 7.11269 16.67 8.41049 17.9678ZM13.3117 16.5346L11.0049 13.0823L13.3117 9.62219L15.6027 13.0823L13.3117 16.5346Z" fill="#CCCCCC"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_583_1825">
+                    <rect width="25.1074" height="25.1074" fill="white" transform="translate(0.946289 0.716919)"/>
+                    </clipPath>
+                    </defs>
+                    </svg>
+                    
+            </h4>
+            <p class="mb-4">
+                Obsesionada con todo lo relacionado con el entrenamiento
+            </p>
+
+            <div class="pt-4 flex flex-col gap-2">
+                <h5 class="font-bebas text-5xl md:text-7xl leading-[0.5]" >€ 29,90</h5>
+                <span>Por cada mes</span>
+            </div>
+
+            <hr class="border border-white-200 w-full" />
+            <div class="flex flex-col text-left gap-2">
+                <h5>incluye:</h5>
+                <ul class="ml-5 text-xs flex flex-col gap-2">
+                    <li>Lorem ipsum dolor sit amet sel vicabrio da troi</li>
+                    <li>Lorem ipsum dolor sit amet sel vicabrio da troi</li>
+                   
+                </ul>
+            </div>
+        </div>
+        <form action="">
+
+            <button formaction="/survey"
+            class="bg-primary p-[14px] px-[22px] rounded-lg text-white mx-[10%]"
+            >Adquirir membresia</button
+            >
+        </form>
+    </div>
+</div>

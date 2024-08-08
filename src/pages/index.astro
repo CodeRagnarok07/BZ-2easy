@@ -1,21 +1,11 @@
 ---
-import Layout from "/src/layouts/Layout.astro";
+import Layout from "/src/components/layout/index.astro";
 import FocalLight from "/src/components/FocalLight.astro";
-import StepPath from "/src/components/sections/home/StepPath.astro";
 
 import bgHero from "/src/assets/bg-hero.svg";
 import player2 from "/src/assets/player2.png";
 import player1 from "/src/assets/player1.png";
-import pathSvg from '/src/assets/home-path.svg'
-
-
-const stepPaths = [
-    { top: 35, left: 3, reverse: false },
-    { top: -15, left: 22, reverse: true },
-    { top: 5, left: 42, reverse: false },
-    { top: -29, left: 63, reverse: true },
-    { top: 5, left: 80, reverse: false },
-];
+import Pricing_component from "../components/sections/Pricing/index.astro";
 ---
 
 <Layout title="home page">
@@ -36,7 +26,7 @@ const stepPaths = [
                 </p>
             </div>
 
-            <a href="survey" class="bg-primary p-2.5 rounded-lg md:text-3xl"
+            <a href="/#planes" class="bg-primary p-2.5 rounded-lg md:text-3xl"
                 >Comenzar ahora</a
             >
         </div>
@@ -57,13 +47,15 @@ const stepPaths = [
             <img
                 src={player2.src}
                 alt=""
-                class="w-auto h-full absolute left-0 -bottom-14"
+                class="w-auto h-full absolute left-0 -bottom-14
+                animate-slide-in-left"
             />
 
             <img
                 src={player1.src}
                 alt=""
-                class="w-auto h-[120%] absolute right-0 -bottom-14"
+                class="w-auto h-[120%] absolute right-0 -bottom-14
+                animate-slide-in-left delay-1000"
             />
         </div>
     </section>
@@ -81,31 +73,6 @@ const stepPaths = [
             <h4 class="md:text-4xl w-[60%]">
                 Subtitulo para indicar alguna información de interés
             </h4>
-        </div>
-
-        <div
-            class="flex w-full overflow-y-scroll overflow-scroll sm:overflow-auto"
-        >
-            <div class="mx-auto">
-                <div
-                style={`background-image: url('${pathSvg.src}');`}
-                    class:list={[
-                        "flex-shrink-0 my-40 overflow-visible flex relative  aspect-[5/1] bg-cover  w-[1717px]",
-                        "bg-no-repeat bg-center", 
-                    ]}
-                >
-                    {
-                        stepPaths.map((e, k) => (
-                            <StepPath
-                                step={k}
-                                top={e.top}
-                                left={e.left}
-                                reverse={e.reverse}
-                            />
-                        ))
-                    }
-                </div>
-            </div>
         </div>
 
         <div class="mb-16 md:my-32 container px-[5%] text-white">
@@ -173,123 +140,7 @@ const stepPaths = [
     </section>
     <!-- ofecemos -->
 
-    <!-- Planes y precios -->
-    <section class="py-16 md:py-32">
-        <div
-            class="container relative pb-16 flex justify-center flex-col items-center"
-        >
-            <h2 class="font-bebas text-5xl md:text-8xl">Planes y precios</h2>
-            <span class="md:text-2xl">Elige el perfecto para ti</span>
-
-            <div class="absolute -top-44 grid place-content-center">
-                <FocalLight />
-            </div>
-        </div>
-        <div class="container px-[10%]">
-            <div class="flex flex-col lg:flex-row justify-center gap-12">
-                <div class="-mt-6 relative z-10 flex flex-col">
-                    <button
-                        class="-mb-4 mx-auto z-10 bg-primary pt-0.5 pb-[14px] px-[22px] rounded-lg text-white"
-                        >Más popular 🔥</button
-                    >
-
-                    <div
-                        class="relative z-20 h-auto flex flex-col gap-14 bg-gray-400 p-8 rounded-3xl text-center"
-                    >
-                        <div class="flex flex-col items-center gap-4">
-                            <h4
-                                class="text-primary text-2xl leading-none flex items-center gap-4 font-bold"
-                            >
-                                Básico
-                                <span
-                                    class="px-4 py-0.5 bg-primary text-white rounded-xl text-sm"
-                                    >5%</span
-                                >
-                            </h4>
-                            <p class="mb-4">
-                                Obsesionada con todo lo relacionado con el
-                                entrenamiento
-                            </p>
-
-                            <div class="pt-4 flex flex-col gap-4">
-                                <h5 class="font-bebas text-5xl md:text-7xl">
-                                    € 80
-                                </h5>
-                                <span>Por todos los meses</span>
-                            </div>
-
-                            <hr class="border border-white-200 w-full" />
-                            <div class="flex flex-col text-left gap-2">
-                                <h5>incluye:</h5>
-                                <ul class="ml-5 flex flex-col gap-2">
-                                    <li>
-                                        Lorem ipsum dolor sit amet sel vicabrio
-                                        da troi
-                                    </li>
-                                    <li>
-                                        Lorem ipsum dolor sit amet sel vicabrio
-                                        da troi
-                                    </li>
-                                    <li>
-                                        Lorem ipsum dolor sit amet sel vicabrio
-                                        da troi
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <button
-                            class="bg-primary p-[14px] px-[22px] rounded-lg text-white mx-[10%]"
-                            >Adquirir membresia</button
-                        >
-                    </div>
-                </div>
-
-                <div
-                    class="relative z-10 h-auto flex flex-col gap-14 bg-gray-400 p-8 rounded-3xl text-center"
-                >
-                    <div class="flex flex-col items-center gap-4">
-                        <h4 class="text-primary text-2xl font-bold">Básico</h4>
-                        <p class="mb-4">
-                            Obsesionada con todo lo relacionado con el
-                            entrenamiento
-                        </p>
-
-                        <div class="pt-4 flex flex-col gap-4">
-                            <h5 class="font-bebas text-5xl md:text-7xl">
-                                € 80
-                            </h5>
-                            <span>Por todos los meses</span>
-                        </div>
-
-                        <hr class="border border-white-200 w-full" />
-                        <div class="flex flex-col text-left gap-2">
-                            <h5>incluye:</h5>
-                            <ul class="ml-5 flex flex-col gap-2">
-                                <li>
-                                    Lorem ipsum dolor sit amet sel vicabrio da
-                                    troi
-                                </li>
-                                <li>
-                                    Lorem ipsum dolor sit amet sel vicabrio da
-                                    troi
-                                </li>
-                                <li>
-                                    Lorem ipsum dolor sit amet sel vicabrio da
-                                    troi
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <button
-                        class="bg-primary p-[14px] px-[22px] rounded-lg text-white mx-[10%]"
-                        >Adquirir membresia</button
-                    >
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Planes y precios -->
-
+    <Pricing_component />
     <!-- Video -->
     <section class="py-16 md:py-32 px-[5%] container">
         <div

@@ -35,3 +35,41 @@ html,body{
 .messagge{
     clip-path: url(/assets/message.svg);
 }
+
+
+@keyframes slide-in-left {
+    0% {
+        transform: translateX(-30%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+
+    }
+}
+.animate-slide-in-left {
+    animation: slide-in-left 2s ease-out both 1s;
+}
+
+
+/* INPUTS */
+
+input{
+    &:focus,&:target{
+        outline: none;
+    }
+}
+
+select{
+    background-color: transparent;
+    outline: transparent;
+    position: relative;
+    &::after, &::before{
+        background-color: transparent;
+        outline: transparent;
+    }
+
+
+}
+
