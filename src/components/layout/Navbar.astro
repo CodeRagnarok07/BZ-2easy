@@ -1,0 +1,25 @@
+---
+import logo from "/src/assets/logo.png";
+
+---
+<nav
+class="container z-20 relative mt-[29px] md:mt-[43px] flex justify-between px-[5%] md:gap-[87px] items-center"
+>
+<a class="md:mr-auto flex-shrink-0" href="/">
+    <img
+        class="w-auto h-[1.9rem] md:h-[3.5rem]"
+        src={logo.src}
+        alt=""
+    /></a
+>
+<div class="flex gap-8 ">
+
+    <a href="/pricing" class="flex-shrink-0 py-2 px-3 cursor-pointer border border-transparent hover:border-primary active:border-primary rounded-md"><p>Planes</p></a>
+    <a href="/auth" class="flex-shrink-0 py-2 px-3 cursor-pointer border border-transparent hover:border-primary active:border-primary rounded-md"><p>Iniciar sesion</p></a>
+    <!-- <select class="select-selected" name="lang" id="">
+        <option value="">es</option>
+        <option value="">en</option>
+        <option value="">it</option>
+    </select> -->
+</div>
+</nav>

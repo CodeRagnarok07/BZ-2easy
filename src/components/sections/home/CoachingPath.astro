@@ -1,0 +1,41 @@
+---
+import StepPath from "./StepPath.astro";
+import pathSvg from "/src/assets/home-path.svg";
+
+const stepPaths = [
+    { top: 35, left: 3, reverse: false },
+    { top: -15, left: 22, reverse: true },
+    { top: 5, left: 42, reverse: false },
+    { top: -29, left: 63, reverse: true },
+    { top: 5, left: 80, reverse: false },
+];
+---
+
+<div class="flex w-full overflow-y-scroll overflow-scroll sm:overflow-auto">
+
+    <div id="StepPath" class="mx-auto">
+        <div
+            style={`background-image: url('${pathSvg.src}');`}
+            class:list={[
+                "flex-shrink-0 my-40 overflow-visible flex relative  aspect-[5/1] bg-cover  w-[1717px]",
+                "bg-no-repeat bg-center",
+            ]}
+        >
+            {
+                stepPaths.map((e, k) => (
+                    <StepPath
+                        step={k}
+                        top={e.top}
+                        left={e.left}
+                        reverse={e.reverse}
+                    />
+                ))
+            }
+        </div>
+    </div>
+
+
+    <script>
+
+    </script>
+</div>
