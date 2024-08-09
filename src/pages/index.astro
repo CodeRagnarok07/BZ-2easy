@@ -6,6 +6,7 @@ import bgHero from "/src/assets/bg-hero.svg";
 import player2 from "/src/assets/player2.png";
 import player1 from "/src/assets/player1.png";
 import Pricing_component from "../components/sections/Pricing/index.astro";
+import CoachingPath from "/src/components/sections/home/CoachingPath.astro";
 ---
 
 <Layout title="home page">
@@ -75,6 +76,8 @@ import Pricing_component from "../components/sections/Pricing/index.astro";
             </h4>
         </div>
 
+        <CoachingPath />
+
         <div class="mb-16 md:my-32 container px-[5%] text-white">
             <div
                 class="bg-primary w-full rounded-2xl md:rounded-[3.8rem] flex justify-around
@@ -139,7 +142,6 @@ import Pricing_component from "../components/sections/Pricing/index.astro";
         </div>
     </section>
     <!-- ofecemos -->
-
     <Pricing_component />
     <!-- Video -->
     <section class="py-16 md:py-32 px-[5%] container">
