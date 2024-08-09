@@ -1,0 +1,84 @@
+{
+    "hero": {
+        "es": {
+            "title": "Conviértete en un Mejor Atleta",
+            "Subtitle": "Lleva tu juego al siguiente nivel y alcanza tus objetivos."
+        },
+        "it": {
+            "title": "Diventa un Miglior Atleta",
+            "Subtitle": "Porta il tuo gioco al livello successivo e raggiungi i tuoi obiettivi."
+        },
+        "en": {
+            "title": "Become a Better Athlete",
+            "Subtitle": "Take your game to the next level and reach your goals."
+        }
+    },
+    "coachingPath":{
+        "es": [
+            {
+                "title": "Evaluación Inicial ",
+                "text": "Recopilamos información detallada sobre tu estado físico, objetivos y preferencias a través de un formulario personalizado."
+            },
+            {
+                "title": "Creación de Rutina Personalizada",
+                "text": "Analizamos tu formulario y, basándonos en los datos proporcionados, diseñamos una rutina de entrenamiento específica para ti. Utilizamos una inteligencia artificial avanzada, supervisada y aprobada por nuestros profesionales, para crear una rutina 100% personalizada. Esto nos permite ofrecerte un plan de entrenamiento que se adapta perfectamente a tus necesidades y objetivos específicos en tu desempeño futbolístico."
+            },
+            {
+                "title": "Implementación del Plan",
+                "text": "Comienza tu entrenamiento con acceso a tu rutina personalizada a través de nuestra plataforma donde te dejamos todo lo necesario para sacarle el máximo provecho a la rutina."
+            },
+            {
+                "title": "Seguimiento y Ajustes",
+                "text": "Se revisará progreso periódicamente y evaluaremos tu desempeño, ajustaremos tu rutina progresivamente, para asegurar un crecimiento constante y efectivo."
+            },
+            {
+                "title": "Soporte Continuo",
+                "text": "Ofrecemos soporte constante y ajustes adicionales según tus necesidades y feedback, asegurando que siempre estés en el camino correcto."
+            }
+        ],
+        "it": [
+            {
+                "title": "Valutazione Iniziale",
+                "text": "Raccogliamo informazioni dettagliate sul tuo stato fisico, obiettivi e preferenze attraverso un modulo personalizzato."
+            },
+            {
+                "title": "Creazione di una Routine Personalizzata Analizziamo",
+                "text": "il tuo modulo e, basandoci sui dati forniti, progettiamo una routine di allenamento specifica per te. Utilizziamo un'intelligenza artificiale avanzata, supervisionata e approvata dai nostri professionisti, per creare una routine personalizzata al 100%. Questo ci consente di offrirti un piano di allenamento che si adatta perfettamente alle tue esigenze e ai tuoi obiettivi specifici nel tuo rendimento calcistico."
+            },
+            {
+                "title": "Implementazione del Piano Inizia",
+                "text": "il tuo allenamento accedendo alla tua routine personalizzata attraverso la nostra piattaforma, dove ti forniamo tutto il necessario per trarre il massimo vantaggio dalla routine."
+            },
+            {
+                "title": "Monitoraggio e Regolazioni",
+                "text": "Rivediamo periodicamente i tuoi progressi e valutiamo le tue prestazioni, regoliamo progressivamente la tua routine per garantire una crescita costante ed efficace."
+            },
+            {
+                "title": "Supporto Continuo",
+                "text": "Offriamo supporto costante e regolazioni aggiuntive in base alle tue esigenze e al tuo feedback, assicurandoti di essere sempre sulla strada giusta."
+            }
+        ],
+        "en": [
+            {
+                "title": "Initial Assessment",
+                "text": "We collect detailed information about your physical condition, goals, and preferences through a personalized form."
+            },
+            {
+                "title": "Personalized Routine Creation",
+                "text": "We analyze your form and, based on the provided data, design a specific training routine for you. We use advanced artificial intelligence, supervised and approved by our professionals, to create a 100% personalized routine. This allows us to offer you a training plan that perfectly fits your needs and specific goals in your football performance."
+            },
+            {
+                "title": "Plan Implementation",
+                "text": "Start your training with access to your personalized routine through our platform, where we provide everything you need to make the most of your routine."
+            },
+            {
+                "title": "Monitoring and Adjustments",
+                "text": "We periodically review your progress and evaluate your performance, progressively adjusting your routine to ensure constant and effective growth."
+            },
+            {
+                "title": "Continuous Support",
+                "text": "We offer constant support and additional adjustments based on your needs and feedback, ensuring you are always on the right track."
+            }
+        ]
+    }
+}
