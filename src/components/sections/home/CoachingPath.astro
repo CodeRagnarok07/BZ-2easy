@@ -1,4 +1,5 @@
 ---
+
 import StepPath from "./StepPath.astro";
 import pathSvg from "/src/assets/home-path.svg";
 
@@ -11,10 +12,22 @@ const stepPaths = [
 ];
 ---
 
-<div class="flex w-full overflow-y-scroll overflow-scroll sm:overflow-auto">
+<style>
+    #sliderDragable{
+     
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+#sliderDragable::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+</style>
 
+<div
+    id="sliderDragable"
+    class="flex w-full overflow-y-scroll overflow-scroll sm:overflow-auto"
+>
     <div id="StepPath" class="mx-auto">
-
         <div
             style={`background-image: url('${pathSvg.src}');`}
             class:list={[
@@ -33,11 +46,38 @@ const stepPaths = [
                 ))
             }
         </div>
-        
     </div>
 
-
     <script>
+        // import { slide } from "astro:transitions";
 
+        const slider = document.getElementById("sliderDragable");
+
+        let lastCursorX = 0
+        let cursorX = 0;
+        let isPressed = false;
+        if (slider) {
+            slider.addEventListener("mousedown", (e) => {
+                isPressed = true;
+                cursorX = e.offsetX;
+                lastCursorX = cursorX
+                slider.style.cursor = "grabbing";
+            });
+            slider.addEventListener("mouseup", () => {
+                slider.style.cursor = "grab";
+                setTimeout(()=>{
+                    slider.style.cursor = "auto";
+                }, 200)
+            });
+
+            window.addEventListener("mouseup", () => {
+                isPressed = false;
+            });
+            slider.addEventListener("mousemove", (e) => {
+                if (!isPressed) return;
+                e.preventDefault();
+                slider.scrollLeft = cursorX - e.pageX;  
+            });
+        }
     </script>
 </div>

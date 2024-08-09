@@ -12,10 +12,19 @@ interface Props {
 const { step = 1, reverse = false, top = 0, left = 0 } = Astro.props;
 ---
 
-<div class=`absolute top-[${top}%] left-[${left}%]`>
+<style>
+    div {
+        -webkit-user-select: none; /* Safari */
+        -ms-user-select: none; /* IE 10 and IE 11 */
+        user-select: none; /* Standard syntax */
+    }
+</style>
+
+<div class=`absolute top-[${top}%] left-[${left}%] pointer-events-none`>
+    
     <div
         class:list={[
-            "flex   gap-2 items-center",
+            "flex   gap-2 items-center ",
             `flex-col${reverse ? "-reverse" : ""}`,
         ]}
     >
@@ -33,10 +42,12 @@ const { step = 1, reverse = false, top = 0, left = 0 } = Astro.props;
         <div
             style={`background-image: url('${reverse ? messageSvg.src : messageSvgT.src}');`}
             class:list={[
-                "bg-center bg-no-repeat bg-origin-border bg-cover",
+                "bg-center bg-no-repeat bg-origin-border bg-cover cursor-auto",
                 " overflow-visible max-w-72 p-4 ",
                 "text-xl flex flex-col relative z-20",
-                reverse ? `justify-start aspect-[93/80]` : `justify-end aspect-[100/80]`,
+                reverse
+                    ? `justify-start aspect-[93/80]`
+                    : `justify-end aspect-[100/80]`,
             ]}
         >
             <h5 class="font-bold">Creación de Rutina Personalizada</h5>
