@@ -1,16 +1,31 @@
 ---
 import Layout from "/src/components/layout/index.astro";
 import Head from "/src/components/Head.astro";
+
+import Login from "/src/components/auth/Login.astro";
+import Register from "/src/components/auth/Register.astro";
 ---
 
 <Layout title="home page">
     <section class="container py-16 pb-32 px-[5%] md:px-[20%] text-sm">
-        <div class="flex bg-gray-400 mx-[5%] p-[5%] max-w-5xl rounded-2xl">
+        <div class="flex bg-gray-400 mx-[5%] p-[5%] md:mx-auto max-w-xl rounded-2xl">
             <div
                 id="form"
                 class="flex overflow-hidden scroll-smooth items-center"
             >
-                <!-- register -->
+          
+            <div
+            id="login"
+            class="flex h-full justify-center flex-col flex-shrink-0 w-full gap-6"
+        >
+            <Head
+                title={`Ingresa a tu cuenta`}
+                description="y descubre el mundo del coaching"
+            />
+            <Login/>
+         
+            <a class="flex mx-auto text-lg" href="#register">Ya tengo cuenta</a>
+        </div>
                 <div
                     id="register"
                     class="flex h-full justify-center flex-col flex-shrink-0 w-full gap-6"
@@ -19,143 +34,12 @@ import Head from "/src/components/Head.astro";
                         title={`Crea tu cuenta`}
                         description="y descubre el mundo del coaching"
                     />
-                    <form action="." class="flex flex-col gap-3">
-                        <div class="flex flex-col md:flex-row gap-4 w-full">
-                            <div class="w-full">
-                                <label
-                                    class="block mb-1 text-base text-gray-900 dark:text-white"
-                                >
-                                    Nombre
-                                </label>
-                                <input
-                                    type="text"
-                                    name="name"
-                                    class="text-sm rounded-lg block w-full p-2.5 bg-gray-600 border-transparent placeholder-gray-100 text-white focus:ring-blue-500 focus:border-blue-500"
-                                    placeholder="nombre"
-                                    required
-                                />
-                            </div>
-                            <div class="w-full">
-                                <label
-                                    class="block mb-1 text-base text-gray-900 dark:text-white"
-                                >
-                                    Apellido
-                                </label>
-                                <input
-                                    type="text"
-                                    name="last_name"
-                                    class="text-sm rounded-lg block w-full p-2.5 bg-gray-600 border-transparent placeholder-gray-100 text-white focus:ring-blue-500 focus:border-blue-500"
-                                    placeholder="apellido"
-                                    required
-                                />
-                            </div>
-                        </div>
-
-                        <div>
-                            <label
-                                class="block mb-1 text-base text-gray-900 dark:text-white"
-                            >
-                                Correo
-                            </label>
-                            <input
-                                type="email"
-                                name="email"
-                                class="text-sm rounded-lg block w-full p-2.5 bg-gray-600 border-transparent placeholder-gray-100 text-white focus:ring-blue-500 focus:border-blue-500"
-                                placeholder="correo electronico"
-                                required
-                            />
-                        </div>
-                        <div>
-                            <label
-                                class="block mb-1 text-base text-gray-900 dark:text-white"
-                            >
-                                Contraseña
-                            </label>
-                            <input
-                                type="password"
-                                name="password"
-                                class="text-sm rounded-lg block w-full p-2.5 bg-gray-600 border-transparent placeholder-gray-100 text-white focus:ring-blue-500 focus:border-blue-500"
-                                placeholder="******"
-                                required
-                            />
-                        </div>
-
-                        <!-- terms -->
-                        <div class="flex gap-4">
-                            <input type="checkbox" required name="" id="" />
-                            <p>
-                                Acepto las políticas de privacidad para toma de
-                                datos personales detalladas en los
-                                <a
-                                    class="text-primary font-bold text-xs"
-                                    href="/#">T&C</a
-                                >
-                            </p>
-                        </div>
-                        <!-- terms -->
-
-                        <button
-                            formaction="/profile"
-                            type="submit"
-                            data-modal-target="static-modal"
-                            class="bg-primary p-2.5 px-6 rounded-lg md:text-3xl text-nowrap  text-center"
-                        >
-                            Enviar formulario
-                        </button>
-                    </form>
+                    <Register/>
                     <a class="flex mx-auto" href="#login">Ya tengo cuenta</a>
                 </div>
-                <!-- register -->
-
-                <!-- login -->
-                <div
-                    id="login"
-                    class="flex h-full justify-center flex-col flex-shrink-0 w-full gap-6"
-                >
-                    <Head
-                        title={`Ingresa a tu cuenta`}
-                        description="y descubre el mundo del coaching"
-                    />
-                    <form action="." class="flex flex-col gap-3">
-                        <div>
-                            <label
-                                class="block mb-1 text-base text-gray-900 dark:text-white"
-                            >
-                                Correo
-                            </label>
-                            <input
-                                type="email"
-                                name="email"
-                                class="text-sm rounded-lg block w-full p-2.5 bg-gray-600 border-transparent placeholder-gray-100 text-white focus:ring-blue-500 focus:border-blue-500"
-                                placeholder="*******"
-                                required
-                            />
-                        </div>
-                        <div>
-                            <label
-                                class="block mb-1 text-base text-gray-900 dark:text-white"
-                            >
-                                Contraseña
-                            </label>
-                            <input
-                                type="password"
-                                name="password"
-                                class="text-sm rounded-lg block w-full p-2.5 bg-gray-600 border-transparent placeholder-gray-100 text-white focus:ring-blue-500 focus:border-blue-500"
-                                placeholder="email"
-                                required
-                            />
-                        </div>
-
-                        <button
-                            type="reset"
-                            class="bg-primary p-2.5 px-6 rounded-lg md:text-3xl text-nowrap  text-center"
-                        >
-                            Enviar formulario
-                        </button>
-                    </form>
-                    <a class="flex mx-auto text-lg" href="#register">Ya tengo cuenta</a>
-                </div>
-                <!-- login -->
+     
+               
+              
             </div>
         </div>
     </section>

@@ -34,12 +34,12 @@ import FocalLight from "/src/components/FocalLight.astro";
         <form
             action="."
             method="dialog"
-            class="flex flex-col gap-8 leading-none"
+            class="flex flex-col gap-8 md:gap-24 leading-none md:px-[10%]"
         >
             <!-- personal -->
 
-            <div>
-                <label class="mb-2">
+            <div class="flex flex-col md:flex-row md:px-[5%] gap-4">
+                <label class="">
                     <span class="mb-2">Nombre</span>
                     <input type="text" class="" required />
                 </label>
@@ -49,7 +49,7 @@ import FocalLight from "/src/components/FocalLight.astro";
                 </label>
             </div>
 
-            <h4 class="text-[22px] text-center font-bebas">
+            <h4 class="text-[22px] md:text-[50px] text-center font-bebas">
                 Experiencia general
             </h4>
 

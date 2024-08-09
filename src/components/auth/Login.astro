@@ -1,0 +1,72 @@
+---
+
+---
+
+<script>
+
+    async function login(user: string, password: string) {
+        const response = await fetch("/api", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ user, password }),
+        });
+        const data = await response.json();
+        return data;
+    }
+
+    const form = document.getElementById("loginForm");
+    form?.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const user = e.target?.userName?.value;
+        const password = e.target?.password?.value;
+
+
+        const result = await login(user, password);
+
+        if (result.status === 'success') {
+            // Manejar el éxito del login
+        } else {
+            // Manejar el error
+        }
+    });
+    
+</script>
+
+<form id="loginForm" action="." class="flex flex-col gap-3">
+    <div>
+        <label class="block mb-1 text-base text-gray-900 dark:text-white">
+            Correo
+        </label>
+        <input
+        value="angel@gmail.com"
+            type="email"
+            name="email"
+            class="text-sm rounded-lg block w-full p-2.5 bg-gray-600 border-transparent placeholder-gray-100 text-white focus:ring-blue-500 focus:border-blue-500"
+            placeholder="correo electronico"
+            required
+        />
+    </div>
+    <div>
+        <label class="block mb-1 text-base text-gray-900 dark:text-white">
+            Contraseña
+        </label>
+        <input
+        value="paswordsupersegura"
+
+            type="password"
+            name="password"
+            class="text-sm rounded-lg block w-full p-2.5 bg-gray-600 border-transparent placeholder-gray-100 text-white focus:ring-blue-500 focus:border-blue-500"
+            placeholder="******"
+            required
+        />
+    </div>
+
+    <button
+        type="submit"
+        class="bg-primary p-2.5 px-6 rounded-lg md:text-3xl text-nowrap text-center my-4"
+    >
+        Enviar formulario
+    </button>
+</form>
