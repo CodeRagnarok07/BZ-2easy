@@ -2,8 +2,8 @@
 import Layout from "/src/components/layout/index.astro";
 import Head from "/src/components/Head.astro";
 
-import Login from "/src/components/auth/Login.astro";
-import Register from "/src/components/auth/Register.astro";
+import Login from "/src/components/sections/auth/Login.astro";
+import Register from "/src/components/sections/auth/Register.astro";
 ---
 
 <Layout title="home page">
@@ -33,12 +33,12 @@ import Register from "/src/components/auth/Register.astro";
                 <div
                 id="login"
                 class="flex h-full justify-center flex-col flex-shrink-0 w-full gap-6">
-                <Head
-                    title={`Ingresa a tu cuenta`}
-                    description="y descubre el mundo del coaching"/>
-                <Login/>
-            
-                <a class="flex mx-auto text-lg" href="#register">Aún no tengo cuenta</a>
+                    <Head
+                        title={`Ingresa a tu cuenta`}
+                        description="y descubre el mundo del coaching"/>
+                    <Login/>
+                
+                    <a class="flex mx-auto text-xl md:text-[1.75rem]" href="#register">Aún no tengo cuenta</a>
                 </div>
                 <div
                     id="register"
@@ -48,7 +48,7 @@ import Register from "/src/components/auth/Register.astro";
                         description="y descubre el mundo del coaching"
                     />
                     <Register/>
-                    <a class="flex mx-auto" href="#login">Ya tengo cuenta</a>
+                    <a class="flex mx-auto text-xl md:text-[1.75rem]" href="#login">Ya tengo cuenta</a>
                 </div>             
             </div>
         </div>
