@@ -1,0 +1,55 @@
+---
+import Dialog from "../../Dialog.astro"
+---
+<form action="">
+			
+    <div class="flex gap-4 my-4 md:my-12 md:gap-8">
+        {
+            [...Array(3).keys()].map((e) => (				
+                <label 
+                class="  flex items-center justify-center  bg-gray-600 hover:bg-gray-300 cursor-pointer 
+                
+                font-bold  
+                text-xs py-1 px-3 rounded-3xl
+                sm:text-lg sm:py-2 sm:px-6 lg:rounded-[4rem]
+                xl:text-3xl xl:py-4 xl:px-10
+                ">
+                    <span class="text-nowrap">Fase 1</span>
+                    <input
+                        class="invisible h-0 w-0"
+                        type="radio"
+                        name="group1"
+                    />
+                </label>
+
+            ))
+        }
+<div class=" flex items-center scale-75 md:scale-150">
+    <Dialog 
+    dialogTitle="Formulario enviado"
+    dialogText={`Te habilitaremos tus lecciones lo más pronto posible, te
+                    avisaremos por medio de Email y mensaje cuando tus clases
+                    personalizadas estén listas en la plataforma`}>
+        
+        
+            <i class="">
+                <svg class="flex my-auto" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="1.93357" y="1.28409" width="16.6463" height="16.6463" rx="8.32315" stroke="#0029FF" stroke-width="2.3537"/>
+                <path d="M9.04517 7.53674H11.0163V14.1072H9.04517V7.53674ZM10.0439 6.8534C9.75917 6.8534 9.52044 6.75923 9.32771 6.57087C9.13497 6.38252 9.0386 6.14817 9.0386 5.86783C9.0386 5.59187 9.13497 5.35971 9.32771 5.17135C9.52044 4.97862 9.75698 4.88225 10.0373 4.88225C10.3133 4.88225 10.5454 4.97862 10.7338 5.17135C10.9265 5.35971 11.0229 5.59187 11.0229 5.86783C11.0229 6.14817 10.9287 6.38252 10.7404 6.57087C10.5564 6.75923 10.3242 6.8534 10.0439 6.8534Z" fill="#0029FF"/>
+                </svg>
+                
+            </i>
+
+        <a 
+       
+        slot="close" class="bg-gray-300 px-8 py-2 rounded-3xl text-xl">
+            Entendido
+        </a>
+
+    </Dialog>
+
+</div>
+        
+
+    </div>
+</form>

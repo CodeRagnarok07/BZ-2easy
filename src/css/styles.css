@@ -69,7 +69,9 @@ select{
         background-color: transparent;
         outline: transparent;
     }
-
-
 }
 
+
+label:has(input[type="radio"]:checked) {
+    @apply bg-primary;
+}

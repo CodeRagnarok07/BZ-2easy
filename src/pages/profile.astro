@@ -1,42 +1,14 @@
 ---
+import FocalLight from "../components/FocalLight.astro";
 import Layout from "/src/components/layout/index.astro";
-
+import FaseSelection from '/src/components/sections/profile/FaseSelection.astro'
+import MyPlan from '/src/components/sections/profile/MyPlan.astro'
 ---
 
 <Layout title="home page">
 	<section class="container px-[10%] my-16">
 		<div class="flex w-full justify-center gap-4 items-center my-8">
-			<span class="text-base">Plan Intermedio</span>
-
-			<button
-				class="bg-gray-400 px-4 py-1 rounded-3xl text-sx text-gray-100
-			flex gap-4 items-center"
-			>
-				Mejorar plan
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					width="9"
-					height="12"
-					viewBox="0 0 9 12"
-					fill="none"
-				>
-					<path
-						d="M0.841248 5.35197L4.81398 1.37924"
-						stroke="#575757"
-						stroke-width="1.31575"></path>
-					<path
-						d="M7.86261 5.35216L3.88988 1.37943"
-						stroke="#575757"
-						stroke-width="1.31575"></path>
-					<line
-						x1="4.36167"
-						y1="1.62137"
-						x2="4.36167"
-						y2="11.1086"
-						stroke="#575757"
-						stroke-width="1.31575"></line>
-				</svg>
-			</button>
+			<MyPlan/>
 		</div>
 
 		<div
@@ -120,15 +92,14 @@ import Layout from "/src/components/layout/index.astro";
 		</div>
 
 		<div class="absolute top-40 grid place-content-center">
-			<wc-focal-light></wc-focal-light>
+				<FocalLight />
 		</div>
 	</section>
 
 	<section class="container px-[10%]">
 		<h3 class="md:text-[2.5rem]">Seguir entrenando</h3>
-		<div
-			class="flex overflow-x-scroll md:overflow-x-auto overflow-y-auto gap-6 my-5"
-		>
+		<div class="flex overflow-x-scroll md:overflow-x-auto overflow-y-auto gap-6 my-5">
+		{[...Array(3).keys()].map((e) => (
 			<a href="/article">
 				<div
 					class="bg-gray-400 flex-shrink-0 p-4 rounded-lg flex flex-col gap-3 text-center w-min md:gap-8"
@@ -148,19 +119,13 @@ import Layout from "/src/components/layout/index.astro";
 					</p>
 				</div>
 			</a>
+		))}
 		</div>
 	</section>
 
 	<section class="container px-[10%] pb-16">
-		<div class="flex gap-4 my-4 md:my-12">
-			{
-				[...Array(3).keys()].map((e) => (
-					<button class="text-base font-bold rounded-3xl flex items-center justify-center px-6 py-1 bg-gray-600 hover:bg-gray-300 cursor-pointer ">
-						Fase 1
-					</button>
-				))
-			}
-		</div>
+
+		<FaseSelection/>
 
 		<div class="my-4 flex flex-col gap-4">
 			{
