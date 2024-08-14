@@ -11,6 +11,6 @@ const { title, description, tclass, dclass} = Astro.props
 ---
 <div class="container text-center">
     
-    <h2 class:list={["font-bebas text-4xl  leading-none", tclass]}>{title}</h2>
+    <h2 class:list={["font-bebas text-4xl  leading-none ", tclass]}>{title}</h2>
     <span class:list={["text-xl leading-none", dclass]}>{description}</span>
 </div>
