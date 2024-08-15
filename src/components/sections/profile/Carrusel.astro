@@ -1,0 +1,71 @@
+---
+
+---
+
+<style>
+    .sliderDragable, *, *::before, *::after, *::-webkit-scrollbar {
+        -ms-overflow-style: none; /* Internet Explorer 10+ */
+        scrollbar-width: none; /* Firefox */
+    }
+    .sliderDragable::-webkit-scrollbar {
+        display: none; /* Safari and Chrome */
+    }
+</style>
+
+<section class="container px-[10%]">
+    <h3 class="md:text-[2.5rem]">Seguir entrenando</h3>
+
+    <div
+        class="sliderDragable flex overflow-x-scroll md:overflow-x-auto overflow-y-auto gap-6 my-5"
+    >
+        {
+            [...Array(3).keys()].map((e) => (
+                <a href="/article">
+                    <div class="bg-gray-400 flex-shrink-0 p-4 rounded-lg flex flex-col gap-3 text-center w-min md:gap-8">
+                        <div class="aspect-[6/4] w-full bg-center bg-cover bg-[url('https://picsum.photos/200/300')] rounded-lg" />
+                        <h5 class="font-bebas text-lg md:text-[2.5rem] min-w-[191px] md:min-w-[459px]">
+                            Horem ipsum dolor sit amet
+                        </h5>
+                        <p class="text-[10px] md:text-base">
+                            consectetur adipiscing elit. Etiam eu turpis
+                            molestie, dictum est a, mattis tellus. Sed
+                            dignissim,
+                        </p>
+                    </div>
+                </a>
+            ))
+        }
+    </div>
+</section>
+<script>
+    const slider = document.querySelector(".sliderDragable");
+
+    let lastCursorX = 0;
+    let cursorX = 0;
+    let isPressed = false;
+    if (slider) {
+        slider.addEventListener("mousedown", (e) => {
+            isPressed = true;
+            cursorX = lastCursorX + e.offsetX;
+            slider.style.cursor = "grabbing";
+
+            console.log(cursorX);
+        });
+        window.addEventListener("mouseup", () => {
+            slider.style.cursor = "grab";
+            isPressed = false;
+
+            setTimeout(() => {
+                slider.style.cursor = "auto";
+            }, 200);
+            console.log(isPressed);
+        });
+
+        slider.addEventListener("mousemove", (e) => {
+            if (!isPressed) return;
+            e.preventDefault();
+            slider.scrollLeft = cursorX - e.pageX;
+            lastCursorX = slider.scrollLeft;
+        });
+    }
+</script>

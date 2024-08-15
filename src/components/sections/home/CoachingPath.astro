@@ -24,10 +24,9 @@ const stepPaths = [
 </style>
 
 <div
-    id="sliderDragable"
-    class="flex w-full overflow-y-scroll overflow-scroll sm:overflow-auto"
+    class="sliderDragable flex w-full overflow-y-scroll overflow-scroll sm:overflow-auto"
 >
-    <div id="StepPath" class="mx-auto">
+    <div  class="mx-auto">
         <div
             style={`background-image: url('${pathSvg.src}');`}
             class:list={[
@@ -48,10 +47,11 @@ const stepPaths = [
         </div>
     </div>
 
+
     <script>
         // import { slide } from "astro:transitions";
 
-        const slider = document.getElementById("sliderDragable");
+        const slider = document.querySelector(".sliderDragable");
 
         let lastCursorX = 0
         let cursorX = 0;

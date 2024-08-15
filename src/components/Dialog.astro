@@ -7,14 +7,16 @@ interface Props {
 const { dialogTitle, dialogText } = Astro.props;
 ---
 
-<custom-dialog>
+<custom-dialog class="outline-none">
     <div class="open">
         <slot />
     </div>
 
     <dialog
         
-    class=" z-20 bg-black bg-opacity-50 h-screen w-screen fixed inset-0">
+    class=" outline-none z-20 bg-black bg-opacity-50 h-screen w-screen fixed inset-0
+    m-0
+    ">
         <div class="relative z-50 pointer-events-auto  w-full h-full flex items-center">
             
             <div

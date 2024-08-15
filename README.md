@@ -3,7 +3,9 @@
 - [x] estilos en Formulario
 - [x] dragable slider
 - [x] pasarela de pago
-- [ ] detalles en micoaching [carrusel dragable] /profile
+- [x] detalles en micoaching 
+  - [x] Dialog in fase selection
+  - [/] carrusel dragable
 - [ ] Cuestionario [completar contenido]
 - [ ] set user
 - [ ] Traducciones btn

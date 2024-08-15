@@ -1,14 +1,15 @@
 ---
 import FocalLight from "../components/FocalLight.astro";
 import Layout from "/src/components/layout/index.astro";
-import FaseSelection from '/src/components/sections/profile/FaseSelection.astro'
-import MyPlan from '/src/components/sections/profile/MyPlan.astro'
+import FaseSelection from "/src/components/sections/profile/FaseSelection.astro";
+import MyPlan from "/src/components/sections/profile/MyPlan.astro";
+import ProfileCarrusel from "/src/components/sections/profile/Carrusel.astro";
 ---
 
 <Layout title="home page">
 	<section class="container px-[10%] my-16">
 		<div class="flex w-full justify-center gap-4 items-center my-8">
-			<MyPlan/>
+			<MyPlan />
 		</div>
 
 		<div
@@ -16,18 +17,21 @@ import MyPlan from '/src/components/sections/profile/MyPlan.astro'
 		>
 			<div class="w-min">
 				<h3
-					class="font-bebas text-7xl md:text-8xl lg:text-9xl xl:text-[150px] text-nowrap"
+					class="font-bebas text-7xl md:text-8xl lg:text-9xl xl:text-[150px] text-nowrap
+					animate-slide-in-left"
 				>
 					¡Hola <span class="text-primary">rafael!</span>
 				</h3>
-				<p class="text-xl md:text-4xl">
+				<p class="text-xl md:text-4xl
+				animate-slide-in-left">
 					Subtitulo para indicar alguna información de interés
 				</p>
 			</div>
 
 			<div
 				class="flex my-16 relative bg-[url('/src/assets/perfil-road.svg')] w-[250px] h-[449px] bg-no-repeat bg-center
-			md:scale-125 md:mx-auto"
+			md:scale-125 md:mx-auto
+			animate-fade-in-up"
 			>
 				<!-- <img class="invisible" src="/src/assets/perfil-road.svg" alt="">				 -->
 
@@ -92,40 +96,16 @@ import MyPlan from '/src/components/sections/profile/MyPlan.astro'
 		</div>
 
 		<div class="absolute top-40 grid place-content-center">
-				<FocalLight />
+			<FocalLight />
 		</div>
 	</section>
 
-	<section class="container px-[10%]">
-		<h3 class="md:text-[2.5rem]">Seguir entrenando</h3>
-		<div class="flex overflow-x-scroll md:overflow-x-auto overflow-y-auto gap-6 my-5">
-		{[...Array(3).keys()].map((e) => (
-			<a href="/article">
-				<div
-					class="bg-gray-400 flex-shrink-0 p-4 rounded-lg flex flex-col gap-3 text-center w-min md:gap-8"
-				>
-					<div
-						class="aspect-[6/4] w-full bg-center bg-cover bg-[url('https://picsum.photos/200/300')] rounded-lg"
-					>
-					</div>
-					<h5
-						class="font-bebas text-lg md:text-[2.5rem] min-w-[191px] md:min-w-[459px]"
-					>
-						Horem ipsum dolor sit amet
-					</h5>
-					<p class="text-[10px] md:text-base">
-						consectetur adipiscing elit. Etiam eu turpis molestie,
-						dictum est a, mattis tellus. Sed dignissim,
-					</p>
-				</div>
-			</a>
-		))}
-		</div>
-	</section>
+		
+		<ProfileCarrusel />
+
 
 	<section class="container px-[10%] pb-16">
-
-		<FaseSelection/>
+		<FaseSelection />
 
 		<div class="my-4 flex flex-col gap-4">
 			{
