@@ -7,6 +7,6 @@
   - [x] Dialog in fase selection
   - [/] carrusel dragable
 - [ ] Cuestionario [completar contenido]
-- [ ] set user
 - [ ] Traducciones btn
 - [ ] internacionalizacion <https://docs.google.com/document/d/155lN5t_K4HBlmKKvZfSwyWkwL-z2IhZ8UfKTIN3ogdU/edit?pli=1>
+- [ ] set user
