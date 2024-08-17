@@ -1,0 +1,3 @@
+[submodule "php_microsite"]
+	path = php_microsite
+	url = https://github.com/CodeRagnarok07/BZ-2easy-php_microsite
