@@ -6,6 +6,8 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   // output: "server",
   integrations: [tailwind({
-     applyBaseStyles: false, 
-    })]
+    applyBaseStyles: false,
+  })],
+  site: "https://coderagnarok07.github.io",
+  // base: 'BZ-2easy',
 });
