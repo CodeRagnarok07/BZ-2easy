@@ -5,23 +5,36 @@ import Layout from "/src/components/layout/index.astro";
 
 ---
 <Layout title="home page">
+	<header class="container px-[5%] relative flex w-full justify-center gap-4 items-center my-8 font-bold">
+
+		<div
+				class="relative flex w-full justify-center gap-4 items-center my-8 font-bold"
+			>
+				<a href="/profile" class="sm:absolute flex gap-2 items-center text-base left-0">
+					<svg
+						class="rotate-180"
+						xmlns="http://www.w3.org/2000/svg"
+						width="11"
+						height="19"
+						viewBox="0 0 11 19"
+						fill="none"
+					>
+						<path
+							d="M1.4943 2L9.40845 9.91414L1.48101 17.8416"
+							stroke="white"
+							stroke-width="2.04849"
+							stroke-linecap="round"></path>
+					</svg>
+					Back
+				</a>
+	
+				<MyPlan />
+			</div>
+		</header>
 
 	<section class="container px-[5%] ">
 
-		<div class="relative flex w-full justify-start gap-4 items-center my-8 font-bold">
-
-			<a href="/profile" class=" flex gap-2 items-center text-base left-0">
-				<svg class="rotate-180" xmlns="http://www.w3.org/2000/svg" width="11" height="19" viewBox="0 0 11 19"
-					fill="none">
-					<path d="M1.4943 2L9.40845 9.91414L1.48101 17.8416" stroke="white" stroke-width="2.04849"
-						stroke-linecap="round" />
-				</svg>
-				Back
-			</a>
-
-			<MyPlan/>
-
-		</div>
+		
 
 		<div class="flex flex-col lg:flex-row gap-10 md:gap-16 lg:text-2xl">
 

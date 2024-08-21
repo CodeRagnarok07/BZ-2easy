@@ -3,11 +3,11 @@
 ---
 
 <style>
-    .sliderDragable, *, *::before, *::after, *::-webkit-scrollbar {
+    #sliderDragable, *, *::before, *::after, *::-webkit-scrollbar {
         -ms-overflow-style: none; /* Internet Explorer 10+ */
         scrollbar-width: none; /* Firefox */
     }
-    .sliderDragable::-webkit-scrollbar {
+    #sliderDragable::-webkit-scrollbar {
         display: none; /* Safari and Chrome */
     }
 </style>
@@ -15,8 +15,12 @@
 <section class="container px-[10%]">
     <h3 class="md:text-[2.5rem]">Seguir entrenando</h3>
 
+    <div class="relative">
+
+
     <div
-        class="sliderDragable flex overflow-x-scroll md:overflow-x-auto overflow-y-auto gap-6 my-5"
+    id="sliderDragable"
+        class="scroll-smooth  flex overflow-x-scroll md:overflow-x-auto overflow-y-auto gap-6 my-5"
     >
         {
             [...Array(3).keys()].map((e) => (
@@ -35,11 +39,81 @@
                 </a>
             ))
         }
-    </div>
-</section>
-<script>
-    const slider = document.querySelector(".sliderDragable");
 
+      
+
+        
+    </div>
+    <div id="control-left" class="hover:cursor-pointer hover:bg-slate-50 hover:bg-opacity-5 absolute inset-y-0 left-0 z-50  place-content-center h-full w-16 px-2" >
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g filter="url(#filter0_b_534_4531)">
+            <rect width="31.2374" height="31.2374" rx="15.6187" transform="matrix(-1 0 0 1 31.8555 0.0632019)" fill="#232323" fill-opacity="0.6"/>
+            <path d="M13.8499 15.6819L19.473 10.0588L17.7616 8.34744L10.4272 15.6819L17.7616 23.0164L19.473 21.305L13.8499 15.6819Z" fill="white"/>
+            </g>
+            <defs>
+            <filter id="filter0_b_534_4531" x="-9.38196" y="-9.9368" width="51.2374" height="51.2374" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+            <feGaussianBlur in="BackgroundImageFix" stdDeviation="5"/>
+            <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_534_4531"/>
+            <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_534_4531" result="shape"/>
+            </filter>
+            </defs>
+            </svg>
+            
+    </div>
+
+    <div id="control-right" class="hover:cursor-pointer hover:bg-slate-50 hover:bg-opacity-5 absolute inset-y-0 right-0 z-50  place-content-center h-full w-16 px-2" >
+
+        <svg class="rotate-180" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g filter="url(#filter0_b_534_4531)">
+            <rect width="31.2374" height="31.2374" rx="15.6187" transform="matrix(-1 0 0 1 31.8555 0.0632019)" fill="#232323" fill-opacity="0.6"/>
+            <path d="M13.8499 15.6819L19.473 10.0588L17.7616 8.34744L10.4272 15.6819L17.7616 23.0164L19.473 21.305L13.8499 15.6819Z" fill="white"/>
+            </g>
+            <defs>
+            <filter id="filter0_b_534_4531" x="-9.38196" y="-9.9368" width="51.2374" height="51.2374" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+            <feGaussianBlur in="BackgroundImageFix" stdDeviation="5"/>
+            <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_534_4531"/>
+            <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_534_4531" result="shape"/>
+            </filter>
+            </defs>
+            </svg>
+            
+    </div>
+
+    <script>
+        const slider =document.getElementById("sliderDragable")
+
+        const sizeChildren = slider?.children[0]?.offsetWidth
+        console.log(slider?.children[0], slider?.children[0].offsetWidth)
+
+        const handleControl = ( isRight) =>{
+            if(isRight){
+                slider.scrollLeft += sizeChildren
+            }else{
+                slider.scrollLeft -= sizeChildren
+            }
+        }
+
+        const controlLeft = document.getElementById("control-left")
+        controlLeft?.addEventListener("click", ()=>{
+            handleControl(false)
+        })
+        const controlRight = document.getElementById("control-right")
+        controlRight?.addEventListener("click", ()=>{
+            handleControl(true)
+        })
+
+
+
+    </script>
+
+</div>
+
+</section>
+
+<!-- <script>
+    const slider = document.querySelector(".sliderDragable");
     let lastCursorX = 0;
     let cursorX = 0;
     let isPressed = false;
@@ -68,4 +142,4 @@
             lastCursorX = slider.scrollLeft;
         });
     }
-</script>
+</script> -->

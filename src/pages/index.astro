@@ -7,6 +7,31 @@ import player2 from "/src/assets/player2.png";
 import player1 from "/src/assets/player1.png";
 import Pricing_component from "../components/sections/Pricing/index.astro";
 import CoachingPath from "/src/components/sections/home/CoachingPath.astro";
+
+const banner = [
+    { n: 20, title: "Estudiantes exitosos" },
+    { n: 21, title: "Años de experiencia" },
+    { n: 30, title: "Usuarios totales" },
+];
+
+const offert = [
+    {
+        title: "Explicaciones personalizadas",
+        text: "Recibe explicaciones detalladas y personalizadas adaptadas a tus necesidades específicas.",
+    },
+    {
+        title: "Videos de coaching personalilizados",
+        text: "Accede a videos de coaching hechos a medida para mejorar tus habilidades en el fútbol.",
+    },
+    {
+        title: "Atención al instante",
+        text: "Obtén respuestas rápidas y soporte continuo de nuestros entrenadores profesionales.",
+    },
+    {
+        title: "Renovación de coaching",
+        text: "Actualiza y ajusta tus rutinas con la ayuda de nuestros expertos, asegurando un progreso constante.",
+    },
+];
 ---
 
 <Layout title="home page">
@@ -19,7 +44,7 @@ import CoachingPath from "/src/components/sections/home/CoachingPath.astro";
                     class="text-[45px] lg:text-[62px] xl:text-[112px] font-bebas leading-none"
                 >
                     Conviértete en <br class="md:hidden" /> un <br
-                        class="hidden md:flex "
+                        class="hidden md:flex"
                     /> mejor atleta
                 </h1>
                 <p class="md:text-[32px] xl:text-[36px]">
@@ -84,17 +109,17 @@ import CoachingPath from "/src/components/sections/home/CoachingPath.astro";
                 p-5 py-3.5 md:py-10 lg:py-16 lx:py-24"
             >
                 {
-                    [1, 2, 3].map((e) => (
+                    banner.map((e) => (
                         <div class="flex flex-col items-center">
                             <span
                                 class="
                             text-[62px] sm:text-[90px] md:text-[120px] lg:text-[180px] xl:text-[200px]
                              leading-none font-black"
                             >
-                                20
+                                {e.n}
                             </span>
                             <p class="text-[9px] sm:text-base md:text-xl lg:text-2xl xl:text-3xl">
-                                Estudiantes exitosos
+                                {e.title}
                             </p>
                         </div>
                     ))
@@ -126,14 +151,13 @@ import CoachingPath from "/src/components/sections/home/CoachingPath.astro";
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 flex-1">
                 {
-                    [1, 2, 3, 4].map((e) => (
+                    offert.map((e) => (
                         <div class="rounded-2xl border border-white-300 p-4 flex flex-col items-center justify-center gap-3 text-center">
                             <h4 class="text-2xl font-bold">
-                                Videos de coaching personalilizados
+                                {e.title}
                             </h4>
                             <p>
-                                Accede a videos de coaching hechos a medida para
-                                mejorar tus habilidades en el fútbol.
+                                {e.text}
                             </p>
                         </div>
                     ))

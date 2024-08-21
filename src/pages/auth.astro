@@ -27,28 +27,27 @@ import Register from "/src/components/sections/auth/Register.astro";
         
         <div class="flex bg-gray-400 mx-[5%] p-[5%] md:mx-auto max-w-xl rounded-2xl">
             <div
-                id="form"
                 class="flex overflow-hidden scroll-smooth items-center">
           
                 <div
                 id="login"
-                class="flex h-full justify-center flex-col flex-shrink-0 w-full gap-6">
+                class="flex h-full justify-center flex-col flex-shrink-0 w-full gap-6 px-2">
                     <Head
                         title={`Ingresa a tu cuenta`}
                         description="y descubre el mundo del coaching"/>
                     <Login/>
                 
-                    <a class="flex mx-auto text-xl md:text-[1.75rem]" href="#register">Aún no tengo cuenta</a>
+                    <a class="flex mx-auto text-xl md:text-2xl" href="#register">Aún no tengo cuenta</a>
                 </div>
                 <div
                     id="register"
-                    class="flex h-full justify-center flex-col flex-shrink-0 w-full gap-6">
+                    class="flex h-full justify-center flex-col flex-shrink-0 w-full gap-6 px-2">
                     <Head
                         title={`Crea tu cuenta`}
                         description="y descubre el mundo del coaching"
                     />
                     <Register/>
-                    <a class="flex mx-auto text-xl md:text-[1.75rem]" href="#login">Ya tengo cuenta</a>
+                    <a class="flex mx-auto text-xl md:text-2xl" href="#login">Ya tengo cuenta</a>
                 </div>             
             </div>
         </div>
