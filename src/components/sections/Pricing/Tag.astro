@@ -2,7 +2,7 @@
 const { hot = false, title } = Astro.props;
 ---
 
-<div class="relative z-10 flex flex-col max-w-md">
+<div class="relative z-10 flex flex-col max-w-md min-h-full">
     {
         hot && (
             <div class="absolute flex -top-6 inset-x-0 z-10 ">
@@ -15,7 +15,7 @@ const { hot = false, title } = Astro.props;
     }
 
     <div
-        class="relative z-20 h-auto flex flex-col gap-14 bg-gray-400 p-8 rounded-3xl text-center"
+        class="relative z-20 h-full flex flex-col gap-14 bg-gray-400 p-8 rounded-3xl text-center"
     >
         <div class="flex flex-col items-center gap-4">
             <h4
@@ -72,28 +72,27 @@ const { hot = false, title } = Astro.props;
                 Obsesionada con todo lo relacionado con el entrenamiento
             </p>
 
-            <div class="pt-4 flex flex-col gap-2">
+            <div class="pt-4 flex flex-col gap-2 w-full" >
                 <h5 class="font-bebas text-5xl md:text-7xl leading-[0.5]">
-                    € 29,90
+                    € {hot ? "29,90" : "24,90"}
                 </h5>
                 <span>Por cada mes</span>
             </div>
 
             <hr class="border border-white-200 w-full" />
-            <div class="flex flex-col text-left gap-2">
+            <div class="flex flex-col text-left gap-2 text-xs md:text-xl mb-auto">
                 <h5>incluye:</h5>
-                <ul class="ml-5 text-xs flex flex-col gap-2">
+                <ul class="ml-5  flex flex-col gap-2">
                     <li>Programación de entrenamiento</li>
                     {hot && <li>Video explicativo de ejercicios</li>}
                 </ul>
             </div>
         </div>
-        <form action="">
-            <button
-                formaction="/payment"
-                class="bg-primary p-[14px] px-[22px] rounded-lg text-white mx-[10%]"
-                >Adquirir membresia</button
+            <a
+
+                href="/payment"
+                class="bg-primary p-[14px] px-[22px] rounded-lg text-white mx-[10%] mt-auto"
+                >Adquirir membresia</a
             >
-        </form>
     </div>
 </div>

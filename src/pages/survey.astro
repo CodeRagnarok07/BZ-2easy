@@ -2,20 +2,10 @@
 import Head from "../components/Head.astro";
 import Layout from "/src/components/layout/index.astro";
 import FocalLight from "/src/components/FocalLight.astro";
+import SelectGroup from "/src/components/sections/survey/SelectGroup.astro";
 ---
 
-<style>
-    input {
-        @apply bg-gray-50 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-400 border-transparent dark:placeholder-gray-100 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500;
-    }
-    label {
-        @apply flex flex-col w-full text-center;
-    }
 
-    label:has(input[type="radio"]:checked) {
-        @apply bg-primary;
-    }
-</style>
 
 <Layout title="home page">
     <section class="container py-16 px-[5%]">
@@ -34,11 +24,11 @@ import FocalLight from "/src/components/FocalLight.astro";
         <form
             action="."
             method="dialog"
-            class="flex flex-col gap-8 md:gap-24 leading-none md:px-[10%]"
+            class="flex flex-col gap-8 md:gap-12 leading-none md:px-[10%]"
         >
             <!-- personal -->
 
-            <div class="flex flex-col md:flex-row md:px-[5%] gap-4">
+            <!-- <div class="flex flex-col md:flex-row md:px-[5%] gap-4">
                 <label class="">
                     <span class="mb-2">Nombre</span>
                     <input maxlength="25" type="text" class="" required />
@@ -47,94 +37,75 @@ import FocalLight from "/src/components/FocalLight.astro";
                     <span class="mb-2">Apellido</span>
                     <input maxlength="25" type="text" class="" required />
                 </label>
-            </div>
+            </div> -->
 
-            <h4 class="text-[22px] md:text-[50px] text-center font-bebas">
+            <h4 class="mt-16  text-[22px] md:text-[50px] text-center font-bebas">
                 Experiencia general
             </h4>
 
             <!-- select -->
+             <SelectGroup
+             ask="¿Cuánto tiempo llevas entrenando regularmente en el gimnasio?"
+             options={["Menos de 6 meses", "6meses - 2años", "Más de 2 años"]}
+             name="exp1"
+             />
 
-            <fieldset class="">
-                <legend class="text-center"
-                    >¿Cuánto tiempo llevas entrenando regularmente en el
-                    gimnasio?</legend
-                >
-                <div class="flex flex-col md:flex-row gap-2 md:gap-4 my-4">
-                    <label
-                        class="cursor-pointer py-5 md:py-10 w-full bg-gray-400 rounded-md hover:bg-gray-200"
-                    >
-                        <span>Menos de 6 meses</span>
-                        <input maxlength="25"
-                            class="invisible h-0 w-0"
-                            type="radio"
-                            name="group1"
-                        />
-                    </label>
+             <SelectGroup
+             ask="¿Con qué frecuencia te entrenas en el gimnasio cada semana?"
+             options={["1-2 veces", "6meses - 2años", "Más de 2 años"]}
+             name="exp2"
+             />
 
-                    <label
-                        class="cursor-pointer py-5 md:py-10 w-full bg-gray-400 rounded-md hover:bg-gray-200"
-                    >
-                        <span>Menos de 6 meses</span>
-                        <input maxlength="25"
-                            class="invisible h-0 w-0"
-                            type="radio"
-                            name="group1"
-                        />
-                    </label>
-                    <label
-                        class="cursor-pointer py-5 md:py-10 w-full bg-gray-400 rounded-md hover:bg-gray-200"
-                    >
-                        <span>Menos de 6 meses</span>
-                        <input maxlength="25"
-                            class="invisible h-0 w-0"
-                            type="radio"
-                            name="group1"
-                        />
-                    </label>
-                </div>
-            </fieldset>
+             <SelectGroup
+             ask="¿Cuál es tu nivel de confianza al ejecutar correctamente los siguientes ejercicios? (Sentadilla con barra, Peso muerto, Press de banca con barra, Press militar con barra)"
+             options={["Nunca los he intentado / necesito asistencia constante", "Estoy familiarizado, pero necesito supervisión ocasional", "Estoy muy confiado y los realizo regularmente sin supervisión"]}
+             name="exp3"
+             />
 
-            <fieldset class="">
-                <legend class="text-center"
-                    >¿Cuánto tiempo llevas entrenando regularmente en el
-                    gimnasio?</legend
-                >
-                <div class="flex flex-col md:flex-row gap-2 md:gap-4 my-4">
-                    <label
-                        class="cursor-pointer py-5 md:py-10 w-full bg-gray-400 rounded-md hover:bg-gray-200"
-                    >
-                        <span>Menos de 6 meses</span>
-                        <input maxlength="25"
-                            class="invisible h-0 w-0"
-                            type="radio"
-                            name="group1"
-                        />
-                    </label>
+             <SelectGroup
+             ask="¿Has participado alguna vez en programas de entrenamiento estructurados (ej. programas de fuerza, culturismo, powerlifting)?"
+             options={["No, nunca", "Sí, pero solo por periodos cortos", "Sí, por un periodo prolongado"]}
+             name="exp4"
+             />
 
-                    <label
-                        class="cursor-pointer py-5 md:py-10 w-full bg-gray-400 rounded-md hover:bg-gray-200"
-                    >
-                        <span>Menos de 6 meses</span>
-                        <input maxlength="25"
-                            class="invisible h-0 w-0"
-                            type="radio"
-                            name="group1"
-                        />
-                    </label>
-                    <label
-                        class="cursor-pointer py-5 md:py-10 w-full bg-gray-400 rounded-md hover:bg-gray-200"
-                    >
-                        <span>Menos de 6 meses</span>
-                        <input maxlength="25"
-                            class="invisible h-0 w-0"
-                            type="radio"
-                            name="group1"
-                        />
-                    </label>
-                </div>
-            </fieldset>
-            <!-- select -->
+
+             <h4 class="mt-16  text-[22px] md:text-[50px] text-center font-bebas">
+                Conocimiento de la Programación de Entrenamiento
+            </h4>
+             <SelectGroup
+             ask="¿Eres capaz de crear y adaptar un programa de entrenamiento basado en tus objetivos?"
+             options={["No, me baso en programas preestablecidos o en entrenadores", 
+             "Sí, pero con habilidades limitadas para modificar y adaptar", "Sí, con un excelente entendimiento de las variables del entrenamiento (volumen, intensidad, frecuencia)"]}
+             name="coEntre1"
+             />
+
+             <SelectGroup
+             ask=" ¿Conoces los principios de periodización y los aplicas en tus entrenamientos?"
+             options={["No, no conozco estos conceptos", "Sí, tengo un conocimiento básico y los aplico ocasionalmente", "Sí, tengo un conocimiento profundo y los uso regularmente"]}
+             name="coEntre2"
+             />
+
+
+
+             <h4 class="mt-16  text-[22px] md:text-[50px] text-center font-bebas">
+               Conocimiento de Progresiones y Adaptación
+            </h4>
+
+             <SelectGroup
+             ask="¿Cómo monitoreas tus progresos en el gimnasio?"
+             options={["No monitoreo los progresos", "Ocasionalmente reviso el peso levantado o el número de repeticiones", "Llevo un diario de entrenamiento detallado y monitoreo constantemente los progresos"]}
+             name="coProgre1"
+
+             />
+             <SelectGroup
+             ask="¿Eres capaz de identificar y corregir por ti mismo posibles errores en tu técnica de ejecución de los ejercicios?"
+             options={["No, dependo completamente del feedback de un entrenador", "Sí, pero a veces necesito confirmación de un experto", "Sí, soy consciente de mis errores y sé cómo corregirlos"]}
+             name="coProgre2"
+
+             />
+
+
+
 
             <button
                 type="reset"

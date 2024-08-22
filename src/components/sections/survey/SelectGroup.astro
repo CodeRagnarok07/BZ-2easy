@@ -1,0 +1,46 @@
+---
+interface Props {
+    name: string;
+    ask: string;
+    options: string[];
+}
+
+const { name, ask, options } = Astro.props;
+---
+
+
+<fieldset class="">
+    <legend class="text-center md:text-3xl"
+        >{ask}</legend
+    >
+    <div class="flex flex-col md:flex-row gap-2 md:gap-4 my-11">
+        {options.map((option) => (
+            
+        <label
+            class="cursor-pointer py-5 md:py-10 w-full bg-gray-400 rounded-md hover:bg-gray-200"
+        >
+            <span>{option}</span>
+            <input maxlength="25"
+                class="invisible h-0 w-0"
+                value={option}
+                type="radio"
+                name={name}
+            />
+        </label>
+        ))}
+
+    </div>
+</fieldset>
+
+<style>
+    input {
+        @apply bg-gray-50 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-400 border-transparent dark:placeholder-gray-100 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500;
+    }
+    label {
+        @apply flex flex-col w-full text-center;
+    }
+
+    label:has(input[type="radio"]:checked) {
+        @apply bg-primary;
+    }
+</style>
