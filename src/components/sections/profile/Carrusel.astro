@@ -3,11 +3,11 @@
 ---
 
 <style>
-    #sliderDragable, *, *::before, *::after, *::-webkit-scrollbar {
+    #carusel, *, *::before, *::after, *::-webkit-scrollbar {
         -ms-overflow-style: none; /* Internet Explorer 10+ */
         scrollbar-width: none; /* Firefox */
     }
-    #sliderDragable::-webkit-scrollbar {
+    #carusel::-webkit-scrollbar {
         display: none; /* Safari and Chrome */
     }
 </style>
@@ -19,7 +19,7 @@
 
 
     <div
-    id="sliderDragable"
+    id="carusel"
         class="scroll-smooth  flex overflow-x-scroll md:overflow-x-auto overflow-y-auto gap-6 my-5"
     >
         {
@@ -81,39 +81,14 @@
             
     </div>
 
-    <script>
-        const slider =document.getElementById("sliderDragable")
-
-        const sizeChildren = slider?.children[0]?.offsetWidth
-        console.log(slider?.children[0], slider?.children[0].offsetWidth)
-
-        const handleControl = ( isRight) =>{
-            if(isRight){
-                slider.scrollLeft += sizeChildren
-            }else{
-                slider.scrollLeft -= sizeChildren
-            }
-        }
-
-        const controlLeft = document.getElementById("control-left")
-        controlLeft?.addEventListener("click", ()=>{
-            handleControl(false)
-        })
-        const controlRight = document.getElementById("control-right")
-        controlRight?.addEventListener("click", ()=>{
-            handleControl(true)
-        })
-
-
-
-    </script>
+    <script src="/src/utils/carusel.js"></script>
 
 </div>
 
 </section>
 
 <!-- <script>
-    const slider = document.querySelector(".sliderDragable");
+    const slider = document.querySelector(".carusel");
     let lastCursorX = 0;
     let cursorX = 0;
     let isPressed = false;
